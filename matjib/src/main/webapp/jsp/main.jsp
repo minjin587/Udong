@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-main2 kim gu nyuong wang gay
-commit test 1 2 3 
-second test
+Re upload test!
 </body>
 </html>
