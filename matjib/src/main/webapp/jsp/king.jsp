@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
-main2 kim gu nyuong wang gay   ssssss
-=======
-Re upload test!
->>>>>>> branch 'master' of https://github.com/minjin587/Udong.git
+¿Õ¶Ë²Ù³ç
 </body>
 </html>
