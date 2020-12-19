@@ -25,7 +25,7 @@
         <div class="container clearfix">
             <h1 class="logo">
                 <!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
-                <a href="#">logo</a>            
+                <a href="#">Logotest</a>            
             </h1>
         <nav>
             <ul class="clearfix">
