@@ -1,0 +1,104 @@
+@charset "EUC-KR";
+@import url(resetCss.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Song+Myung&display=swap");
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Song Myung', serif;
+*/
+
+/* LAYOUT */
+.container {
+  width: 1130px;
+  margin: 0 auto;
+}
+/* TYPOGRAPHY (세부내용)*/
+body {
+  font: normal 18/27px "Roboto", sans-serif;
+  columns: #2e2e2e;
+}
+.main_title {
+  font: nomal 55px/1 "Roboto", sans-serif;
+  color: #fff;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.content_title {
+  font: nomal 32px/1 "Roboto", sans-serif;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.content_sub_title {
+  font: nomal 23px/1 "Roboto", sans-serif;
+}
+a {
+  font-style: italic;
+  color: #f6604c;
+  text-decoration: none;
+}
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  padding: 27px 0;
+}
+.logo {
+  float: left; 
+  font-size: 24px;
+  color: white;
+}
+.logo a {
+  width: 54px;
+  height: 54px;
+  background: url(../img/logosample.jpg) no-repeat;
+  text-indent: -9999em;
+  display: block;
+}
+nav {
+  float: right;
+}
+nav ul li {
+  float: left;
+  margin-left: 27px;
+}
+nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font: normal bold 14px/54px "Song Myung", serif;
+}
+/* CONTENT */
+/* BANNNER-START*/
+.banner_list .slide {
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+}
+.banner_list .slide1 {
+  background-image: url(../img/slide1.png);
+}
+.banner_list .slide2 {
+  background-image: url(../img/slide-1-bg.jpg);
+}
+.banner_list .slide3 {
+  background-image: url(../img/slide3.png);
+}
+/* MAIN-CONTENT */
+
+/* MAIN-CONTENT */
+/* BANNNER-END*/
+
+/* FOOTER*/
+
+/* ABOUT */
+
+/* PORTFOLIO*/
+
