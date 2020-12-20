@@ -85,54 +85,28 @@
     </div>
     <!-- banner -->
 
-    <!-- main_content -->
+   
     <div class="main_content">
         <h3>Third Title</h3>
         <p><a href="#">All Matjip</a></p>
-        <ul class="project_list">
-            <li>
+        <ul class="project_list" align="center">
+            <li >
+                <img src="../img/sample2.jpg" alt="image explane" />
                 <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-                <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
             </li>
             <li>
                 <img src="../img/sample2.jpg" alt="image2"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
                 <img src="../img/sample2.jpg" alt="image3"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
             </li>
+
             <li>
                 <img src="../img/sample2.jpg" alt="image4"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
+				<img src="../img/sample2.jpg" alt="image5"/>
             </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image5"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>            
+      
         </ul>
     </div>
-    <!-- main_content -->
+   
 
     <!-- footer -->
     <footer>
@@ -140,7 +114,7 @@
         <div class="footer_main">
             <i></i>
             <p>
-                문의가 필요하신 부분은 관리자에게 이메일을 전송해주세요 ! 
+                문의가 필요하신 부분은 관리자에게 이메일을 전송해주세요 ! ff
                 필요한 내용 작성.
             </p>
             <!-- 문의하기  -->
