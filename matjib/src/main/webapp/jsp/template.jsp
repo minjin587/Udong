@@ -30,8 +30,8 @@
         <nav>
             <ul class="clearfix">
                 <li><a href="#">로그인</a></li>
-                <li><a href="#">마이페이지</a></li>
-                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
                 <li><a href="#">
                 	<i class="fas fa-user"></i>
                 </a><li>
@@ -52,25 +52,24 @@
             data-cycle-pager=".banner .pager"
             >
             <li class="slide1 slide">
-                <h2 class="fancy-box color main_title">WrojectTitle</h2> 
-                <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
-                </div>
+                <!-- <h2 class="fancy-box color main_title">WrojectTitle</h2> --> 
+                <!-- <div class="slide_contents"> -->                    
+                    <a href="#" class="btn">바로가기</a>
+                <!-- </div> -->
             </li>
             <li class="slide2 slide">
-                <h2 class="fancy-box color main_title">ProjectTitle</h2> 
-                <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
-                </div>
+                <!-- <h2 class="fancy-box color main_title">ProjectTitle</h2> --> 
+                <!-- <div class="slide_contents">    
+                </div> -->                
+                     <a href="#" class="btn">바로가기</a>
+                
             </li>  
             <li class="slide3 slide">
-                <h2 class="fancy-box color main_title">ProjectTitle</h2> 
-                <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
-                </div>
+                <!-- <h2 class="fancy-box color main_title">ProjectTitle</h2> --> 
+                <!-- <div class="slide_contents">
+                </div> -->                    
+                     <a href="#" class="btn">바로가기</a>
+                
             </li>              
         </ul>
         <!-- 슬라이드 이동버튼 -->
@@ -89,49 +88,25 @@
 
     <!-- main_content -->
     <div class="main_content">
-        <h3>Third Title</h3>
-        <p><a href="#">All Matjip</a></p>
+        <h3>Third Title</h3>        
         <ul class="project_list">
             <li>
-                <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
+                <a href="#"><img src="../img/Ranking_main.jpg" alt="image explane"/>
+                </a>
+                <div class="hover_content">                    
                 </div>
-                <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
+                <img src="../img/Local_main.jpg" alt="image explane"/>
+                <div class="hover_content">                    
                 </div>
             </li>
             <li>
-                <img src="../img/sample2.jpg" alt="image2"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
+                <img src="../img/Category_main.jpg" alt="image2"/>
+                <div class="hover_content">     
+                </div>  
+                <img src="../img/Recommand_main.jpg" alt="image3"/>
+                <div class="hover_content">                
                 </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image3"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image4"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image5"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>            
+            </li>    
         </ul>
     </div>
     <!-- main_content -->
