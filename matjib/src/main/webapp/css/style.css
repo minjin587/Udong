@@ -10,6 +10,7 @@ font-family: 'Song Myung', serif;
 .container {
   width: 1130px;
   margin: 0 auto;
+  margin-left:50px
 }
 /* TYPOGRAPHY (세부내용)*/
 body {
@@ -36,11 +37,11 @@ body {
 a {
   font-style: italic;
   color: #f6604c;
-  text-decoration: none;
+  text-decoration: none;  
 }
 /* Header */
 header {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 101;
   left: 0;
@@ -53,14 +54,17 @@ header {
   color: white;
 }
 .logo a {
-  width: 54px;
-  height: 54px;
-  background: url(../img/logosample.jpg) no-repeat;
+  width: 250px;
+  height: 60px;
+  background: url(../img/logo_gray.jpg) no-repeat;
   text-indent: -9999em;
   display: block;
 }
 nav {
-  float: right;
+/*   float: right; */
+  position:absolute;
+  right:50px;
+  
 }
 nav ul li {
   float: left;
@@ -91,6 +95,7 @@ nav ul li a {
 .banner_list .slide3 {
   background-image: url(../img/slide3.png);
 }
+
 /* MAIN-CONTENT */
 
 /* MAIN-CONTENT */

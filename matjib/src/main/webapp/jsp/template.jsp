@@ -32,7 +32,9 @@
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">마이페이지</a></li>
                 <li><a href="#">로그아웃</a></li>
-                
+                <li><a href="#">
+                	<i class="fas fa-user"></i>
+                </a><li>
             </ul>
         </nav>
         </div>
