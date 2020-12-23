@@ -8,12 +8,16 @@ font-family: 'Song Myung', serif;
 
 /* LAYOUT */
 .container {
-  width: 1130px;
-  margin: 0 auto;
-  margin-left:50px
+  width: 1348px;
+  margin: 0;    
 }
-
-.main_content {padding:81px 0 108px;}
+.scontainer{
+	width:1348px;
+	margin: 0 auto;	
+}
+.main_content {
+	padding:81px 0 108px;
+}
 /* TYPOGRAPHY (세부내용)*/
 body {
   font: normal 18/27px "Roboto", sans-serif;
@@ -25,6 +29,7 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   font-weight: 300;
+ 
 }
 .content_title {
   font: nomal 32px/1 "Roboto", sans-serif;
@@ -32,10 +37,11 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 54px;
+  
 }
-.content_sub_title {
+/* .content_sub_title {
   font: nomal 23px/1 "Roboto", sans-serif;
-}
+} */
 a {
   font-style: italic;
   color: #f6604c;
@@ -75,8 +81,8 @@ header {
   padding: 27px 0;
 }
 .logo {
-  float: left; 
-  font-size: 24px;
+  float: left;  
+  margin-left:50px;  
   color: white;
 }
 .logo a {
@@ -86,8 +92,9 @@ header {
   text-indent: -9999em;
   display: block;
 }
+
 nav {
-/*   float: right; */
+  float: right;
   position:absolute;
   right:50px;
   
@@ -128,19 +135,6 @@ nav ul li a {
 .banner_list .slide3 {
   background-image: url(../img/slide3.png);
 }
-/* BANNNER-END*/
-/* MAIN - CONTENT */
-.project_list{
-	display: inline-block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-/* MAIN-CONTENT */
 
 .controls a {
 	font-size:55px;
@@ -163,6 +157,57 @@ nav ul li a {
 	left:49%;
 	
 }
+/* BANNNER-END*/
+/* MAIN - CONTENT */
+.main_content p {
+	text-align:center;
+}
+.main_content .project_link {
+	margin-bottom:54px;
+}
+.project_list li{
+	float:left; 
+	width:600px;
+	margin-left:35px; 
+	margin-right:35px;
+	padding:3px; 
+	border:1px solid #919191;
+	box-sizing:border-box;
+		
+}
+.project_list li img{
+	width:100%; height:auto;
+}
+/* .project_list li:nth-chile(2n){
+	margin-right:0;
+}
+.project_list li .hover_content{
+	position:absolute;
+	left:3px; 
+	right:3px;
+	top:3px;
+	bottom:3px;
+	background:rgba(0,0,0,0.5);  
+	padding-top:79px;
+	text-align:center;
+	opacith:0;
+	transition:0.4s;
+}
+.project_list li .hover_content h4{
+	margin-bottom:48px;
+	font-size:23px;
+	color:#f4af55;		
+}
+.project_list li .hover_content a{
+	font-size:14px;
+	color:#fff;		
+	text-transform:uppercase;
+	font-stlye:normal;
+}
+.project_list li:hover .hover_content {
+	opacity:1;
+} */
+/* MAIN-CONTENT */
 /* FOOTER*/
 
 /* ABOUT */

@@ -87,25 +87,28 @@
     <!-- banner -->
 
     <!-- main_content -->
-    <div class="main_content">
-        <h3>Third Title</h3>        
+    <div class="main_content scontainer">
+        <h3 class="content_title">Third Title</h3>
+        <p class="project_link"><a href="#">Subtitle</a></p>        
         <ul class="project_list">
-            <li>
-                <a href="#"><img src="../img/Ranking_main.jpg" alt="image explane"/>
-                </a>
-                <div class="hover_content">                    
-                </div>
-                <img src="../img/Local_main.jpg" alt="image explane"/>
-                <div class="hover_content">                    
-                </div>
+           <li>  
+                <img src="../img/Recommand_main.jpg" alt="image3"/>                
+               <!--  <div class="hover_content">   
+                	<h4>Hover Test!</h4>
+                	<a href="#">Click HERE!!</a>             
+                </div> -->
             </li>
             <li>
-                <img src="../img/Category_main.jpg" alt="image2"/>
-                <div class="hover_content">     
-                </div>  
-                <img src="../img/Recommand_main.jpg" alt="image3"/>
-                <div class="hover_content">                
-                </div>
+                <a href="#"><img src="../img/Local_main.jpg" alt="image explane"/>
+                </a>             
+            </li>
+            <li>
+                <a href="#"><img src="../img/Category_main.jpg" alt="image2"/>
+                </a>                
+            </li>
+            <li>  
+                <a href="#"><img src="../img/Recommand_main.jpg" alt="image3"/>
+                </a>               
             </li>    
         </ul>
     </div>
@@ -113,9 +116,8 @@
 
     <!-- footer -->
     <footer>
-        <i class="fas fa-people-carry fancy-box orange"></i>
-        <div class="footer_main">
-            <i></i>
+        <div class="footer_main scontainer">
+            <i class="fas fa-people-carry fancy-box orange"></i>
             <p>
                 문의가 필요하신 부분은 관리자에게 이메일을 전송해주세요 ! 
                 필요한 내용 작성.
