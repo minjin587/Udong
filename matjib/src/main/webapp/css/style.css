@@ -12,11 +12,13 @@ font-family: 'Song Myung', serif;
   margin: 0;    
 }
 .scontainer{
-	width:1348px;
+	width:1800px;
 	margin: 0 auto;	
 }
 .main_content {
-	padding:81px 0 108px;
+	padding:81px 0 108px;	
+	/* background: url(../img/background.jpg) no-repeat; */
+	background-color:#c0c0c0;	
 }
 /* TYPOGRAPHY (세부내용)*/
 body {
@@ -166,17 +168,19 @@ nav ul li a {
 	margin-bottom:54px;
 }
 .project_list li{
-	float:left; 
+	/* float:left;  */
+	display:inline-block;
 	width:600px;
 	margin-left:35px; 
 	margin-right:35px;
+	margin-bottom:50px;
 	padding:3px; 
 	border:1px solid #919191;
 	box-sizing:border-box;
 		
 }
 .project_list li img{
-	width:100%; height:auto;
+	width:100%; height:auto;	
 }
 /* .project_list li:nth-chile(2n){
 	margin-right:0;
@@ -208,6 +212,65 @@ nav ul li a {
 	opacity:1;
 } */
 /* MAIN-CONTENT */
+/* FOOTER*/
+footer{
+	text-align:center;
+}
+.footer_main{	
+	background:#333538;
+	padding:81px 0 71px;
+	margin-top:-27px;
+}
+footer .fancy-box{	
+	padding:0px 35px;
+}
+.fancy-box.orange{
+	background:rgba(244,175,85,.9);
+}
+footer .icon{
+	font-size:55px;
+	color:#fff;
+}
+.footer_main p{
+	width:685px;
+	margin:0 auto 37px;
+	color:#fff;
+}
+
+.footer_main form input[type="email"]{
+	display:inline-bolck;
+	width:300px;
+	height:40px;
+	padding:0 19px;
+	border:none;
+	font-style:italic; 
+	color:#000000;
+}
+.footer_main form input[tpye="email"]::placeholder{
+	color:#ff0000;
+}
+
+footer .share {
+	margin:54px 0;
+}
+footer .share a{
+	background:#f6604c;
+	font-size:14px;
+	color:#fff;
+	border-radius:5px;
+	width:24px;
+	height:20px;
+	display:inline-block;
+	transition:0.4s;
+}
+
+footer .share a:hover{
+	background:#ebebeb;
+	color:#f6604c;
+}
+footer .copy{
+	margin-bottom:50px;
+} 
 /* FOOTER*/
 
 /* ABOUT */

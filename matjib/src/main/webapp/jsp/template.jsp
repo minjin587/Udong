@@ -92,7 +92,7 @@
         <p class="project_link"><a href="#">Subtitle</a></p>        
         <ul class="project_list">
            <li>  
-                <img src="../img/Recommand_main.jpg" alt="image3"/>                
+                <img src="../img/Ranking_main.jpg" alt="image3"/>                
                <!--  <div class="hover_content">   
                 	<h4>Hover Test!</h4>
                 	<a href="#">Click HERE!!</a>             
@@ -116,21 +116,23 @@
 
     <!-- footer -->
     <footer>
-        <div class="footer_main scontainer">
-            <i class="fas fa-people-carry fancy-box orange"></i>
+    	<span class="icon fancy-box orange">
+    		<i class="fas fa-people-carry "></i>
+    	</span>
+        <div class="footer_main">            
             <p>
                 문의가 필요하신 부분은 관리자에게 이메일을 전송해주세요 ! 
                 필요한 내용 작성.
             </p>
             <!-- 문의하기  -->
             <form action="#" method="POST">
-                <input type="text" name="text" placeholder="Write your Text!"/> 
+                <input type="email" name="email" placeholder="Write your Text!"/> 
                 <!-- <button type="submit" class="btn">Send E-mail</button> -->
                 <!-- <input tpy=e"image" crc="send.png" alt="" class="btn" -->
                 <input type="submit" value="Send" class="btn"/>
             </form>
         </div>
-            <p class="explane">
+            <p class="share">
                 <a href="#">
                     <i class="fab fa-facebook"></i>
                 </a>
