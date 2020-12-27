@@ -17,28 +17,49 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="http://malsup.github.com/jquery.cycle2.js"></script>
     <!-- Cycle2 -->
-
+	<script type="text/javascript">
+	
+	
+	
+	</script>
 </head>
-<body>    
-    <!-- header -->
-    <header>
-        <div class="container clearfix">
-            <h1 class="logo">
-                <!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
-                <a href="#">logo</a>            
-            </h1>
-        <nav>
-            <ul class="clearfix">
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">마이페이지</a></li>
-                <li><a href="#">로그아웃</a></li>
-                
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <!-- header -->
-
+<body> 
+<div class = "mainbody">
+	<div class = "web">
+    <div class = "headerdiv">
+    	<!-- header -->
+    	<header>
+        	<div class="container clearfix">
+            	<h1 class="logo">
+                	<!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
+                	<a href="#">logo</a>            
+            	</h1>
+        	<nav>
+            	<ul class="clearfix">
+                	<li><a href="#">로그인</a></li>
+                	<li><a href="#">회원가입</a></li>
+                	<li class = "my"><a href="#">내 정보</a>
+                		<ul class = "my-test">
+                			<li>문의사항</li>
+                			<li>내정보 변경</li>
+                			<li>비밀번호 변경</li>
+                			<li>뭐 있을까</li>
+                		</ul>
+                	</li>
+                	<li class = "my2"><a href="#">예약정보</a>
+                		<ul class = "my2-test">
+                			<li>예약취소</li>
+                			<li>예약</li>
+                			<li>예약확인</li>
+                		</ul>
+                	</li>
+            	</ul>
+        	</nav>
+        	
+        	</div>
+    	</header>
+ 	   <!-- header -->
+	</div>
      <!-- banner   --> <!-- 배너 슬라이드 -->
     <div class="banner">
         <ul class="banner_list cycle-slideshow" 
@@ -50,87 +71,63 @@
             data-cycle-pager=".banner .pager"
             >
             <li class="slide1 slide">
-                <h2 class="fancy-box color main_title">WrojectTitle</h2> 
                 <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
+                    <a href="#" class="btn">d</a>
                 </div>
             </li>
             <li class="slide2 slide">
-                <h2 class="fancy-box color main_title">ProjectTitle</h2> 
                 <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
+                    <a href="#" class="btn">d</a>
                 </div>
             </li>  
             <li class="slide3 slide">
-                <h2 class="fancy-box color main_title">ProjectTitle</h2> 
                 <div class="slide_contents">
-                    <p>환영 인사 </p>
-                    <a href="#" class="btn">필요한 링크</a>
+                    <a href="#" class="btn">d</a>
                 </div>
             </li>              
         </ul>
         <!-- 슬라이드 이동버튼 -->
-        <p class="controls">
-            <a href="#" class="prev">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            <a href="#" class="next">
-                <i class="fas fa-angle-right"></i>
-            </a>
-        </p>
+        <!-- 왜 되는거지? -->
+        <div class = "button-prev">
+        <button type = "button" class = "prev">
+                <i class="fas fa-angle-left fa-4x"></i>
+        </button>
+        </div>
+        <div class = "button-next">
+        <button class = "next">
+                <i class="fas fa-angle-right fa-4x"></i>
+        </button>
+        </div>
         <!-- 슬라이드 갯수 자동생성 -->
+        <div class = "pagerdiv">
         <p class="pager"></p>
+        </div>
     </div>
     <!-- banner -->
 
     <!-- main_content -->
-    <div class="main_content">
-        <h3>Third Title</h3>
-        <p><a href="#">All Matjip</a></p>
-        <ul class="project_list">
-            <li>
-                <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-                <img src="../img/sample2.jpg" alt="image explane"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image2"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image3"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image4"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>
-            <li>
-                <img src="../img/sample2.jpg" alt="image5"/>
-                <div class="hover_content">
-                    <h4>Let's go Link!</h4>
-                    <a href="#">Click for details</a>
-                </div>
-            </li>            
-        </ul>
+    <div class="main_rnaking">
+		<h1 class ="main_title">인기 메뉴 top6</h1> 
+		<div class = "king_image">
+			<ul class = "image">
+				<li><a><img alt="" src="../img/sample1.jpg" width="300px" height="300px"/>1번</a>
+					<a><img alt="" src="../img/sample1.jpg" width="300px" height="300px"/>2번</a>
+					<a><img alt="" src="../img/sample1.jpg" width="300px" height="300px"/></a>
+					<a><img alt="" src="../img/sample1.jpg" width="300px" height="300px"/></a>
+					<a><img alt="" src="../img/sample1.jpg" width="300px" height="300px"/></a>
+				</li>
+			</ul>
+		</div>
+    </div>
+    <div class="main_rnaking2">
+		<h1>여러가지 메뉴 넣을곳</h1>
+		<table border="10" align ="center">
+			<tr align = "center" border = "10" margin-top = "5"><td>123</td><td>123</td></tr>
+			<tr align = "center" border = "5"><td>456</td><td>456</td></tr>
+			<tr align = "center" border = "5"><td>789</td><td>789</td></tr>
+			<tr align = "center" border = "5"><td>000</td><td>000</td></tr>
+			<tr align = "center" border = "5"><td>111</td><td>111</td></tr>
+		</table>
     </div>
     <!-- main_content -->
 
@@ -185,6 +182,7 @@
 
         </div>
     </nav> -->
-
+    </div>
+</div>
 </body>
 </html>
