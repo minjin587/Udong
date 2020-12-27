@@ -22,7 +22,7 @@
 <body>    
     <!-- header -->
     <header>
-        <div class="container clearfix">
+        <div class="container clearfix" style="position:realative;">
             <h1 class="logo">
                 <!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
                 <a href="#">Logotest</a>            
@@ -42,7 +42,7 @@
     <!-- header -->
 
      <!-- banner   --> <!-- 배너 슬라이드 -->
-    <div class="banner">
+    <div style="position:realative;" class="banner">
         <ul class="banner_list cycle-slideshow" 
             data-cycle-fx="scrollHorz" 
             data-cycle-timeout="2000"
@@ -87,7 +87,7 @@
     <!-- banner -->
 
     <!-- main_content -->
-    <div class="main_content scontainer">
+    <div class="main_content scontainer" style="position:realative;">
         <h3 class="content_title">Third Title</h3>
         <p class="project_link"><a href="#">Subtitle</a></p>        
         <ul class="project_list">
