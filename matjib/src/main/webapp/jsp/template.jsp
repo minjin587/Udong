@@ -88,8 +88,14 @@
 
     <!-- main_content -->
     <div class="main_content scontainer" style="position:realative;">
-        <h3 class="content_title">Third Title</h3>
-        <p class="project_link"><a href="#">Subtitle</a></p>        
+        <h3 class="content_title">
+        <!-- form action="#" method="GET"></form> -->
+        	<input type="text" name="main_Search" placeholder="Insert your Search Text!"/>        	
+        	<input type="submit" value="Search" class="btn"/>
+        
+        </h3>
+        
+        <p class="project_link"><a href="#">전체 맛집목록 보기는 여기를 클릭하세요!!</a></p>        
         <ul class="project_list">
            <li>  
                 <img src="../img/Ranking_main.jpg" alt="image3"/>                
@@ -131,7 +137,7 @@
                 <!-- <input tpy=e"image" crc="send.png" alt="" class="btn" -->
                 <input type="submit" value="Send" class="btn"/>
             </form>
-        </div>
+        
             <p class="share">
                 <a href="#">
                     <i class="fab fa-facebook"></i>
@@ -140,10 +146,22 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </p>
-            <p class="copy">
-                &copy; 2020 copyright
+            <h1 class="logo">
+                <!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
+                <a href="#">Logotest</a>            
+            </h1>
+            <p class="copy" align="left">
+            ㈜ 우리동네맛집<br>
+	    서울특별시 서초구 강남대로00길 00, 0층<br>
+	    대표이사: 홍길동<br>
+	    사업자 등록번호: 123-45-678910 [사업자정보확인]<br>
+	    통신판매업 신고번호: 1111-서울송파-00000<br>
+	    고객센터: 02-123-4567<br>
+
+&copy; 2020 UridoneMatjip Co., Ltd. All rights reserved.
+                
             </p>
-        
+        </div>
     </footer>
     <!-- footer -->
 
