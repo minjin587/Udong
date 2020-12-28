@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style2.css">
 </head>
 <body>
 <div class = "body">
@@ -15,9 +16,11 @@
 <%-- 			<c:forEach var= "image-num" item= "${list} varStatus="??"> --%>
 			<div class = "image">
 <!-- 			<img alt="" src=""> -->
-				<img alt="" src="../ima/slide1.png" height="100" width="100"/>
+				<img alt="" src="../img/slide1.png" height="300" width="300"/>
 <%-- 			<p>${numberlist} : <c:out value="${list }"/> --%>
-				<p>제목</p> 
+				<p class = "test">제목</p> 
+				<img alt="" src="../img/slide1.png" height="300" width="300"/>
+				<p class = "test2">제목</p> 
 			</div>
 <%-- 			</c:forEach> --%>
 		</div>

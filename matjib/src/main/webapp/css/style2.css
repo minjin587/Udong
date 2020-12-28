@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.body-main {
+	width: 30%;
+	background-color: blue;
+	margin: 50px;
+	float: center;
+	text-align: center;
+	
+}
+p {
+	display: inline;
+	margin: 10px;
+}
