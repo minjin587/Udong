@@ -55,7 +55,10 @@ q:after {
   content: "";
   content: none;
 }
-
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 .clearfix::after {
   content: "";
   display: block;
@@ -63,72 +66,4 @@ q:after {
 }
 img {
   vertical-align: top;
-}
-/* 여기부터 추가 */
-.banner {
-	width: 100%;
-	height: 100%;
-	max-width: 1500px;
-	max-height: 1000px;
-	margin-bottom: 50px;
-}
-.mainbody {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-}
-.headerdiv {
-	width: 100%;
-	height: 130px;
-}
-.web {
-	max-width: 1500px;
-	margin: 0 auto 10px;
-	position: relative;
-}
-.slide_contents {
-	width: 100%;
-	height: 600px;
-}
-.prev {
-	float: left;
-}
-.next {
-	float: right;
-}
-.pagerdiv {
-	float: middle;	
-}
-.main_rnaking {
-	width: 60%;
-	height: 1000px;
-	float: left;
-}
-.main_rnaking2 {
-	width: 30%;
-	height: 1000px;
-	float: right;
-}
-table {
-	width: 100%;
-	height: 100%;
-	border: 1px solid #333333;
-}
-.aksl{
-	border-spacing: 0px;
-}
-.main_title{
-	padding-right: 50px;
-}
-.king_image {
-	display: inline-block; 
-	margin: 10px;
-	vertical-align: top;
-}
-.image {
-	top: 10px;
-	left: 10px;
-	margin: 10px;
-	position: relative;
-	display: inline-block; 
 }
