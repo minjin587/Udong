@@ -1,5 +1,7 @@
 package controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,26 +12,22 @@ import dao.LoginDao;
 import model.User;
 
 @Controller
-public class MainController {
+public class EntryController {
 	@Autowired
 	private LoginDao loginDao;
 	
 	
-	//회원 가입으로 이동
-	@RequestMapping(value="/jsp/userentry.html",
-			method=RequestMethod.GET)
-	public ModelAndView entryForm() {
+	// 회원가입 실행
+	@RequestMapping(value="/entry/entry.html",
+			method=RequestMethod.POST)
+	public ModelAndView entry(User user, 
+			HttpSession session) {
+		loginDao.entryUser(user);
 		ModelAndView mav = new ModelAndView(
-				"jsp/userentry");
+				"jsp/template");
 		mav.addObject("user",new User());
-		mav.addObject("BODY","userentry.jsp");
-		return mav;		
-	}
-			
-	// 첫화면 매핑
-	@RequestMapping(value="/main/main.html",method=RequestMethod.GET)
-	public ModelAndView main() {
-		ModelAndView mav = new ModelAndView("jsp/template");
+		session.setAttribute("loginUser", user.getUser_id());
+		mav.addObject("BODY","main.jsp");
 		return mav;
 	}
 }

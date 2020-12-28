@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +31,8 @@
             </h1>
         <nav>
             <ul class="clearfix">
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
+                <li><a href="../login/login.html">로그인</a></li>
+                <li><a href="../jsp/userentry.html">회원가입</a></li>
                 <li><a href="#">고객센터</a></li>
                 <li><a href="#">
                 	<i class="fas fa-user"></i>
@@ -95,28 +97,17 @@
         
         </h3>
         
-        <p class="project_link"><a href="#">전체 맛집목록 보기는 여기를 클릭하세요!!</a></p>        
-        <ul class="project_list">
-           <li>  
-                <img src="../img/Ranking_main.jpg" alt="image3"/>                
-               <!--  <div class="hover_content">   
-                	<h4>Hover Test!</h4>
-                	<a href="#">Click HERE!!</a>             
-                </div> -->
-            </li>
-            <li>
-                <a href="#"><img src="../img/Local_main.jpg" alt="image explane"/>
-                </a>             
-            </li>
-            <li>
-                <a href="#"><img src="../img/Category_main.jpg" alt="image2"/>
-                </a>                
-            </li>
-            <li>  
-                <a href="#"><img src="../img/Recommand_main.jpg" alt="image3"/>
-                </a>               
-            </li>    
-        </ul>
+        <p class="project_link"><a href="#">전체 맛집목록 보기는 여기를 클릭하세요!!</a></p>
+       		<div class="project_list">
+       			<c:choose>
+       				<c:when test="${BODY != null }">
+       					<jsp:include page="${BODY }"></jsp:include>
+       				</c:when>
+       				<c:otherwise>
+       					<jsp:include page="../jsp/main.jsp"></jsp:include>
+       				</c:otherwise>
+       			</c:choose>
+       		</div>   
     </div>
     <!-- main_content -->
 
