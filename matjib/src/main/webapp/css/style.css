@@ -1,6 +1,7 @@
 @charset "EUC-KR";
 @import url(resetCss.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Song+Myung&display=swap");
+/* @media (max-width: 600px) */
 /* 
 font-family: 'Roboto', sans-serif;
 font-family: 'Song Myung', serif;
@@ -179,8 +180,8 @@ nav ul li a {
 .project_list li{
 	/* float:left;  */
 	display:inline-block;	
-	width:745px;
-	margin-left:35px; 
+	width:45%;
+	margin-left:45px; 
 	margin-right:35px;
 	margin-bottom:50px;
 	padding:3px; 
