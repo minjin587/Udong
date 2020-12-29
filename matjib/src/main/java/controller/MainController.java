@@ -14,14 +14,16 @@ public class MainController {
 	@Autowired
 	private LoginDao loginDao;
 	
+	
+	// 랭킹 세부화면으로 이동 //
 	@RequestMapping(value="/main/ranking.html",
 			method=RequestMethod.GET)
 	public ModelAndView ranking() {
 		ModelAndView mav = new ModelAndView(
-				"jsp/ranking");
+				"jsp/template");
+		mav.addObject("BODY","ranking.jsp");
 		return mav;
 	}
-	
 	
 	
 	
@@ -30,16 +32,28 @@ public class MainController {
 			method=RequestMethod.GET)
 	public ModelAndView entryForm() {
 		ModelAndView mav = new ModelAndView(
-				"jsp/userentry");
+				"jsp/template");
 		mav.addObject("user",new User());
-		mav.addObject("BODY","userentry.jsp");
+		mav.addObject("BODY","userentry.jsp");		
 		return mav;		
 	}
-			
-	// 첫화면 매핑
-	@RequestMapping(value="/main/main.html",method=RequestMethod.GET)
-	public ModelAndView main() {
-		ModelAndView mav = new ModelAndView("jsp/template");
+	
+	// BODY안에 4사진 
+	@RequestMapping(value="/jsp/main.html",
+			method=RequestMethod.GET)
+	public ModelAndView main(String BODY) {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");
+		mav.addObject("BODY","main.jsp");		
+		return mav;
+	}
+	
+		
+	// 첫화면 매핑 (Index 와 template)
+	@RequestMapping(value="/main/template.html",method=RequestMethod.GET)
+	public ModelAndView template() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");		
 		return mav;
 	}
 }
