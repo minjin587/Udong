@@ -21,10 +21,10 @@ public class MainController {
 	public ModelAndView ranking() {
 		ModelAndView mav = new ModelAndView(
 				"jsp/template");
-		mav.addObject("BODY","ranking.jsp");
+		mav.addObject("BANNER","banner_detail.jsp");
+		mav.addObject("BODY","ranking.jsp");		
 		return mav;
 	}
-	
 	
 	
 	//회원 가입으로 이동
