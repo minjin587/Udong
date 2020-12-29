@@ -12,13 +12,9 @@
 <body>
 	<form:form name="frm" modelAttribute="user" 
 	method="POST" action="../entry/entry.html">
-		<div>
-			<label for="user_id">I D</label>
-			<form:input path="user_id" maxlength="20" /><br/>
-			<label for="user_pw">P W</label>
-			<form:input path="user_pw" maxlength="20" /><br/>
-			<input type="submit" value="submit"> <input type="reset"
-				value="reset"> <br />
+		<div align="center">
+			<a href="#">일반 회원 가입은 여기로!(이미지) </a>
+			<a href="#">기업 회원 가입은 여기로!(이미지) </a>
 		</div>
 	</form:form>
 </body>

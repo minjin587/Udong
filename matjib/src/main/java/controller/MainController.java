@@ -34,6 +34,7 @@ public class MainController {
 		ModelAndView mav = new ModelAndView(
 				"jsp/template");
 		mav.addObject("user",new User());
+		mav.addObject("BANNER","banner_entry.jsp");
 		mav.addObject("BODY","userentry.jsp");		
 		return mav;		
 	}
