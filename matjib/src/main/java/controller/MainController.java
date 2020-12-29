@@ -15,13 +15,27 @@ public class MainController {
 	private LoginDao loginDao;
 	
 	
+	
+	//고객센터 매핑//
+	@RequestMapping(value="/jsp/qnacenter.html",
+			method=RequestMethod.GET)
+	public ModelAndView qnacenter() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");
+		mav.addObject("BANNER","banner_qnacenter.jsp");
+		mav.addObject("BODY","qnacenter.jsp");
+		return mav;
+	}
+	
+	
+	
 	// 랭킹 세부화면으로 이동 //
 	@RequestMapping(value="/main/ranking.html",
 			method=RequestMethod.GET)
 	public ModelAndView ranking() {
 		ModelAndView mav = new ModelAndView(
 				"jsp/template");
-		mav.addObject("BANNER","banner_detail.jsp");
+		mav.addObject("BANNER","banner_ranking.jsp");
 		mav.addObject("BODY","ranking.jsp");		
 		return mav;
 	}

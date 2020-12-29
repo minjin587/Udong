@@ -36,7 +36,7 @@
 				<ul class="clearfix">
 					<li><a href="../login/login.html">로그인</a></li>
 					<li><a href="../jsp/userentry.html">회원가입</a></li>
-					<li><a href="#">고객센터</a></li>
+					<li><a href="../jsp/qnacenter.html">고객센터</a></li>
 					<li><a href="#"> <i class="fas fa-user"></i>
 					</a>
 					<li>
@@ -62,18 +62,7 @@
 
 	<!-- main_content -->
 	<div class="main_content scontainer" style="position: realative;">
-		<h3 class="content_title">
-			<!-- form action="#" method="GET"></form> -->
-			<input type="text" name="main_Search"
-				placeholder="Insert your Search Text!" /> <input type="submit"
-				value="Search" class="btn" />
-
-		</h3>
-
-		<p class="project_link">
-			<a href="#">전체 맛집목록 보기는 여기를 클릭하세요!!</a>
-		</p>
-		<div class="project_list">
+				<div class="project_list">
 			<c:choose>
 				<c:when test="${BODY != null }">
 					<jsp:include page="${BODY }"></jsp:include>
