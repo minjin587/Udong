@@ -14,6 +14,16 @@ public class MainController {
 	@Autowired
 	private LoginDao loginDao;
 	
+	@RequestMapping(value="/main/ranking.html",
+			method=RequestMethod.GET)
+	public ModelAndView ranking() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/ranking");
+		return mav;
+	}
+	
+	
+	
 	
 	//회원 가입으로 이동
 	@RequestMapping(value="/jsp/userentry.html",
