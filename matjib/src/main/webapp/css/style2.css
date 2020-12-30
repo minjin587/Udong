@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+div {
+	display: block;
+}
 .body-main {
 	width: 30%;
 	background-color: blue;
@@ -11,4 +13,8 @@
 p {
 	display: inline;
 	margin: 10px;
+}
+.test p {
+	display: block;
+	margin: 100px;
 }

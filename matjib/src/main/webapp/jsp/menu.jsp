@@ -18,9 +18,10 @@
 <!-- 			<img alt="" src=""> -->
 				<img alt="" src="../img/slide1.png" height="300" width="300"/>
 <%-- 			<p>${numberlist} : <c:out value="${list }"/> --%>
-				<p class = "test">제목</p> 
-				<img alt="" src="../img/slide1.png" height="300" width="300"/>
-				<p class = "test2">제목</p> 
+				<p>제목</p>  
+			</div>
+			<div class = "test">
+				<p>--------------------------------------</p>
 			</div>
 <%-- 			</c:forEach> --%>
 		</div>

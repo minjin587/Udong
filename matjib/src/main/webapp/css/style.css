@@ -1,6 +1,7 @@
 @charset "EUC-KR";
 @import url(resetCss.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Song+Myung&display=swap");
+/* @media (max-width: 600px) */
 /* 
 font-family: 'Roboto', sans-serif;
 font-family: 'Song Myung', serif;
@@ -40,6 +41,15 @@ body {
   text-align: center;
   margin-bottom: 54px;
   
+}
+.content_title input[type="text"]{
+	display:inline-bolck;
+	width:300px;
+	height:40px;
+	padding:0 19px;
+	border:none;
+	font-style:italic; 
+	color:#000000;
 }
 /* .content_sub_title {
   font: nomal 23px/1 "Roboto", sans-serif;
@@ -168,6 +178,7 @@ nav ul li a {
    margin-bottom:54px;
 }
 .project_list li{
+<<<<<<< HEAD
    /* float:left;  */
    display:inline-block;
    width:600px;
@@ -178,9 +189,26 @@ nav ul li a {
    border:1px solid #919191;
    box-sizing:border-box;
       
+=======
+	/* float:left;  */
+	display:inline-block;	
+	width:45%;
+	margin-left:45px; 
+	margin-right:35px;
+	margin-bottom:50px;
+	padding:3px; 
+	border:1px solid #919191;
+	box-sizing:border-box;
+		
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 }
 .project_list li img{
+<<<<<<< HEAD
    width:100%; height:auto;   
+=======
+	width:100%; 
+	height:600px; /* auto */	
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 }
 /* .project_list li:nth-chile(2n){
    margin-right:0;
@@ -232,9 +260,15 @@ footer .icon{
    color:#fff;
 }
 .footer_main p{
+<<<<<<< HEAD
    width:685px;
    margin:0 auto 37px;
    color:#fff;
+=======
+	width:100%;
+	margin:0 auto 37px;
+	color:#fff;
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 }
 
 .footer_main form input[type="email"]{
@@ -251,9 +285,14 @@ footer .icon{
 }
 
 footer .share {
+<<<<<<< HEAD
    margin:54px 0;
+=======
+	margin:20px 0;
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 }
 footer .share a{
+<<<<<<< HEAD
    background:#f6604c;
    font-size:14px;
    color:#fff;
@@ -262,6 +301,16 @@ footer .share a{
    height:20px;
    display:inline-block;
    transition:0.4s;
+=======
+	background:rgba(244,175,85,.9);
+	font-size:14px;
+	color:#fff;
+	border-radius:5px;
+	width:24px;
+	height:20px;
+	display:inline-block;
+	transition:0.4s;
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 }
 
 footer .share a:hover{
@@ -269,7 +318,17 @@ footer .share a:hover{
    color:#f6604c;
 }
 footer .copy{
+<<<<<<< HEAD
    margin-bottom:50px;
+=======
+	/* margin-bottom:50px; */	
+	border-top: 1px solid #6a6a6a;
+	padding: 90px 0 42px 0;
+	background-color:#333538;
+	color:white;
+	border-bottom: 1px solid #6a6a6a;
+	margin:20px;
+>>>>>>> branch 'DongUk' of https://github.com/minjin587/Udong.git
 } 
 /* FOOTER*/
 
