@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Usermapper">
+	<!-- 회원가입 -->
+	<insert id="insertUser" parameterType="model.User">
+		insert into
+		user_table(user_no,user_id,password,name,nickname,
+		birth,gender,phone,email,profile,grade)values(#{user_no},#{user_id},#{password},#{name},#{nickname},#{birth},#{gender},#{phone},#{email},#{profile},#{grade})
+
+	</insert>
+	<select id="getPassword" resultType="String"
+		parameterType="String">
+		select password from user_table where user_id=#{user_id}
+	</select>
+	<select id="getGrade" resultType="String"
+		parameterType="String">
+		select grade from user_table where user_id=#{user_id}
+	</select>
+	<select id="getMaxIdNo" resultType="Integer">
+		select max(user_no) from user_table
+	</select>
+	<!-- <insert id="upload" parameterType="model.User"> -->
+	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->
+
+	<!-- </insert> -->
+	<!-- <select id="getMaxPhotoNo" resultType="Integer"> -->
+	<!-- select max(photo_no) from album -->
+	<!-- </select> -->
+</mapper>

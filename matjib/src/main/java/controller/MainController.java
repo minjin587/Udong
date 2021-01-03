@@ -14,7 +14,35 @@ public class MainController {
 	@Autowired
 	private LoginDao loginDao;
 	
+	//로그인
+	@RequestMapping(value="/login/login.html",
+			method=RequestMethod.GET)
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");
+		mav.addObject("BANNER","banner_login.jsp");
+		mav.addObject("BODY","login_test.jsp");
+		return mav;
+	}
 	
+	//업체등록
+	@RequestMapping(value="/jsp/storedetail.html",
+	         method=RequestMethod.GET)
+	   public ModelAndView storeDetail() {
+	      ModelAndView mav = new ModelAndView(
+	            "jsp/template");
+	      mav.addObject("BANNER","banner_store_detail.jsp");
+	      mav.addObject("BODY","store_regist.jsp");      
+	      return mav;
+	   }
+	//마이페이지
+	@RequestMapping(value= "/jsp/mypage.html")
+	public ModelAndView Mypage() {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		mav.addObject("BANNER","banner_mypage.jsp");
+		mav.addObject("BODY","mypage.jsp");
+		return mav;
+	}
 	
 	//고객센터 매핑//
 	@RequestMapping(value="/jsp/qnacenter.html",
