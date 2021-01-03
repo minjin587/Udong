@@ -27,7 +27,8 @@
             <li>  
                 <a href="#"><img src="../img/Recommand_main.jpg" alt="image3"/>
                 </a>               
-            </li>    
+            </li>  
+              
         </ul>
 </body>
 </html>

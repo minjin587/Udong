@@ -13,7 +13,7 @@
 	<form:form name="frm" modelAttribute="user" 
 	method="POST" action="../entry/entry.html">
 		<div align="center">
-			<a href="#">일반 회원 가입은 여기로!(이미지) </a>
+			<a href="../entry/normalUser.html">일반 회원 가입은 여기로!(이미지) </a>
 			<a href="#">기업 회원 가입은 여기로!(이미지) </a>
 		</div>
 	</form:form>

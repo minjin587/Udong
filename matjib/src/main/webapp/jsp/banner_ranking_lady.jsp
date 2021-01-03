@@ -16,12 +16,12 @@
 	crossorigin="anonymous"></script>
 <script	src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-<title>User_Entry</title>
+<title>Banner_lady</title>
 </head>
 <body>
 	<div class="banner_list container clearfix">
-		<h1>회원 가입</h1>
-		<h2>"우리동네 맛집의 회원이 되어 다양한 이벤트에 참여해보세요!"</h2>
+		<h1>2021 우리동네 맛집 TOP 100</h1>
+		<h2>"여성 선호 우리동네 맛집리스트  "</h2>
 	</div>
 </body>
 </html>

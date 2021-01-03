@@ -14,6 +14,28 @@ public class MainController {
 	@Autowired
 	private LoginDao loginDao;
 	
+	@RequestMapping(value="/jsp/storedetail.html",
+			method=RequestMethod.GET)
+	public ModelAndView storeDetail() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");
+		mav.addObject("BANNER","banner_store_detail.jsp");
+		mav.addObject("BODY","store_regist.jsp");		
+		return mav;
+	}
+	
+	
+	
+	//로그인 페이지 매핑//
+	@RequestMapping(value="/jsp/login.html",
+			method=RequestMethod.GET)
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView(
+				"jsp/template");
+		mav.addObject("BANNER","banner_login.jsp");
+		mav.addObject("BODY","login_test.jsp");
+		return mav;
+	}
 	
 	
 	//고객센터 매핑//

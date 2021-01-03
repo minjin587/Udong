@@ -20,11 +20,38 @@
 		<p class="project_link">
 			<a href="#">전체 맛집목록 보기는 여기를 클릭하세요!!</a>
 		</p>
-
-
-	<a href="">여성선호</a>
-	<a href="">지역별</a>
-	<a href="">분류별 </a>
-	<a href="">관리자 추천</a>	
+	<ul class="ranking_list">
+           <li>  
+                <a href="../ranking/lady.html">
+                <img src="../img/Ranking_Lady.jpg" alt="image3"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="../img/Ranking_Date.jpg" alt="image explane"/>
+                </a>             
+            </li>
+            <li>
+                <a href="#">
+                <img src="../img/Ranking_Uncle.jpg" alt="image2"/>
+                </a>                
+            </li>
+            <li>  
+                <a href="#">
+                <img src="../img/Ranking_2030.jpg" alt="image3"/>
+                </a>               
+            </li>  
+             <li>  
+                <a href="#">
+                <img src="../img/Ranking_solo.jpg" alt="image3"/>
+                </a>               
+            </li>  
+              <li>  
+                <a href="#">
+                <img src="../img/Ranking_Instar.jpg" alt="image3"/>
+                </a>               
+            </li>  
+               
+        </ul>
 </body>
 </html>

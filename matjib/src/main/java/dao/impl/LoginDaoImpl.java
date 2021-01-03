@@ -9,6 +9,10 @@ import model.User;
 
 @Repository
 public class LoginDaoImpl implements LoginDao {
+	public String getPassword(String user_id) {
+		return session.selectOne("mapper.Usermapper.getPassword",user_id);
+	}
+
 	@Autowired
 	private SqlSession session;
 	

@@ -4,7 +4,20 @@
 <mapper namespace="mapper.Usermapper">
 	<!-- 회원가입 -->
 	<insert id="insertUser" parameterType="model.User">
-		insert into user_info(user_id,user_pw)
-		values(#{user_id},#{user_pw})
+		insert into
+		user_table(user_no,user_id,password,name,nickname,
+		birth,gender,phone,email,profile,grade)values(#{user_no},#{user_id},#{password},#{name},#{nickname},#{birth},#{gender},#{phone},#{email},#{profile},#{grade})
+
 	</insert>
+	<select id="getPassword" resultType="String"
+		parameterType="String">
+		select password from user_table where user_id=#{user_id}
+	</select>
+	<!-- <insert id="upload" parameterType="model.User"> -->
+	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->
+
+	<!-- </insert> -->
+	<!-- <select id="getMaxPhotoNo" resultType="Integer"> -->
+	<!-- select max(photo_no) from album -->
+	<!-- </select> -->
 </mapper>

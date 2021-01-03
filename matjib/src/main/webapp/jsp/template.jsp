@@ -34,12 +34,15 @@
 			</h1>
 			<nav>
 				<ul class="clearfix">
-					<li><a href="../login/login.html">로그인</a></li>
+					<li><a href="../jsp/login.html">로그인</a></li>
 					<li><a href="../jsp/userentry.html">회원가입</a></li>
 					<li><a href="../jsp/qnacenter.html">고객센터</a></li>
-					<li><a href="#"> <i class="fas fa-user"></i>
-					</a>
-					<li>
+					<li><a href="#"> <i class="fas fa-user"></i></a></li>
+					
+					<li><a href="../jsp/storedetail.html">
+					<i class="fas fa-clipboard-list"></i></a>
+					</li>				
+					
 				</ul>
 			</nav>
 		</div>
@@ -62,7 +65,7 @@
 
 	<!-- main_content -->
 	<div class="main_content scontainer" style="position: realative;">
-				<div class="project_list">
+				<!-- <div class="project_list"> -->
 			<c:choose>
 				<c:when test="${BODY != null }">
 					<jsp:include page="${BODY }"></jsp:include>
@@ -71,10 +74,10 @@
 					<jsp:include page="main.jsp"></jsp:include>
 				</c:otherwise>
 			</c:choose>
-		</div>
+		<!-- </div> -->
 	</div>
 	<!-- main_content -->
-
+	
 	<!-- footer -->
 	<footer>
 		<span class="icon fancy-box orange"> <i
