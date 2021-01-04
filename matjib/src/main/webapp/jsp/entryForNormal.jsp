@@ -132,17 +132,10 @@
 					onchange="preview_image(event)" name="image">
 				</div>
 			</div>
-			
-			
-			
 			<div class="store_bottom">
 			<input type="hidden" name="grade" value="N">
 			<input type="submit" value="가입하기">
 			</div>
-			
-			
-			
-			
 			</div>
 		</form>
 

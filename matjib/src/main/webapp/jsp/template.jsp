@@ -30,7 +30,7 @@
 		<div class="container clearfix" style="position: realative;">
 			<h1 class="logo">
 				<!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
-				<a href="#">Logotest</a>
+				<a target="_self" href="../main/template.html">Logotest</a>
 			</h1>
 			        <nav>
             <ul class="clearfix">
