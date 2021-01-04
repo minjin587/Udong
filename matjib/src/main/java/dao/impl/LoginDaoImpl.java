@@ -9,6 +9,14 @@ import model.User;
 
 @Repository
 public class LoginDaoImpl implements LoginDao {
+	public String getGrade(String user_id) {
+		return session.selectOne("mapper.Usermapper.getGrade",user_id);
+	}
+
+	public Integer getMaxIdNo() {
+		return session.selectOne("mapper.Usermapper.getMaxIdNo");
+	}
+
 	public String getPassword(String user_id) {
 		return session.selectOne("mapper.Usermapper.getPassword",user_id);
 	}

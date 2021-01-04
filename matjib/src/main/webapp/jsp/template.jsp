@@ -32,19 +32,25 @@
 				<!-- <img src="Udong_logo.jpg" alt="udong_project"/> -->
 				<a href="#">Logotest</a>
 			</h1>
-			<nav>
-				<ul class="clearfix">
-					<li><a href="../jsp/login.html">로그인</a></li>
-					<li><a href="../jsp/userentry.html">회원가입</a></li>
-					<li><a href="../jsp/qnacenter.html">고객센터</a></li>
-					<li><a href="#"> <i class="fas fa-user"></i></a></li>
-					
-					<li><a href="../jsp/storedetail.html">
-					<i class="fas fa-clipboard-list"></i></a>
-					</li>				
-					
-				</ul>
-			</nav>
+			        <nav>
+            <ul class="clearfix">
+               <c:if test="${sessionScope.loginUser == null }">
+               <li><a href="../login/login.html" class="login">로그인</a></li>
+               </c:if>
+               <c:if test="${sessionScope.loginUser != null }">
+               <li><a href="../logout/template.html" class="login">로그아웃</a></li>
+               </c:if>
+               <li><a href="../jsp/userentry.html">회원가입</a></li>
+               <li><a href="../jsp/qnacenter.html">고객센터</a></li>
+               <li><a href="#"> <i class="fas fa-user"></i></a></li>
+               <c:if test="${sessionScope.grade =='M' }">               
+               <li><a href="../jsp/storedetail.html">
+               <i class="fas fa-clipboard-list"></i></a></li>
+              </c:if>
+               
+               
+            </ul>
+         </nav>
 		</div>
 	</header>
 	<!-- header -->

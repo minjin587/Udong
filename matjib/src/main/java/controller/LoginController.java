@@ -28,11 +28,13 @@ public class LoginController {
 			mav.getModel().putAll(br.getModel());
 		}
 		String password = loginDao.getPassword(user.getUser_id());
+		String grade = loginDao.getGrade(user.getUser_id());
 		if (password == null || !user.getPassword().equals(password)) {
 			JOptionPane.showMessageDialog(null, "아이디와 암호를 확인하세요.");
 		} else {
 			session.setAttribute("loginUser", user.getUser_id());
-			
+			session.setAttribute("grade",grade);
+
 		}
 		return mav;
 	}

@@ -13,6 +13,13 @@
 		parameterType="String">
 		select password from user_table where user_id=#{user_id}
 	</select>
+	<select id="getGrade" resultType="String"
+		parameterType="String">
+		select grade from user_table where user_id=#{user_id}
+	</select>
+	<select id="getMaxIdNo" resultType="Integer">
+		select max(user_no) from user_table
+	</select>
 	<!-- <insert id="upload" parameterType="model.User"> -->
 	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->
 

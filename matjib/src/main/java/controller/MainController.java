@@ -27,7 +27,7 @@ public class MainController {
 	
 	
 	//로그인 페이지 매핑//
-	@RequestMapping(value="/jsp/login.html",
+	@RequestMapping(value="/login/login.html",
 			method=RequestMethod.GET)
 	public ModelAndView login() {
 		ModelAndView mav = new ModelAndView(

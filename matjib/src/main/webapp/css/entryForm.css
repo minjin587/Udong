@@ -4,8 +4,7 @@
 * {
   box-sizing: border-box;
 }
-
-input[type=text], select, textarea {
+.row .tel input[type=text], select{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -13,6 +12,60 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+input[type=text]{
+  width: 77%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=password]{
+  width: 77%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=file]{
+  width: 77%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=email]{
+  width: 77%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=radio] {
+  width: 17%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 .sidebar {
   margin: 0;
   padding: 0;
@@ -31,7 +84,7 @@ input[type=text], select, textarea {
 }
 
 .sidebar a {
-   /* float: left; */
+	/* float: left; */
 }
 
 .sidebar a.active {
@@ -47,7 +100,7 @@ input[type=text], select, textarea {
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
-  /* height: 1000px; */
+  height: 1000px;
 }
 
 
@@ -73,7 +126,7 @@ label {
 }
 
 .store_bottom{
-   text-align:center;
+	text-align:center;
 }
 
 .store_bottom input[type=submit] {
@@ -117,7 +170,7 @@ label {
 .row:after {
   content: "";
   display: table;
-  /* clear: both; */
+  clear: both;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
