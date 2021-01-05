@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
 
 <meta charset="EUC-KR">
-<title>Store_Regist</title>
+<title>Store_Management</title>
 <script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"
 	charset="utf-8"></script>
 <script type="text/javascript">
@@ -105,13 +105,13 @@
 </script>
 </head>
 <body>
-	<div class="store_container">
+<div class="store_container">
 		<form action="/action_page.php" method="post"
 			enctype="multipart/form-data">
-<!-- 업체등록이 완료된 경우에는 첫페이지가 관리페이지로 가야함 -->
+
 			<div class="sidebar">
-				<a class="active" href="#home">업체 등록</a>
-				<a href="../jsp/store_Manage.html">업체 관리</a> 
+				<a class="#" href="../jsp/storedetail.html">업체 등록</a> 
+				<a class="active" href="#home">업체 관리</a> 
 				<a href="../jsp/store_secession.html">업체 철회</a> 
 				<a href="#">기타 항목</a>
 			</div>
@@ -121,11 +121,11 @@
 
 				<div class="row">
 					<div class="col-25">
-						<label for="store_name">사업자 번호 : </label>
+						<label for="store_name" >사업자 번호 : </label>
 					</div>
 					<div class="col-75">
-						<input type="text" id="store_name" name="store_name"
-							placeholder="사업자 번호를 입력해주세요 . ex)1111-서울서초-111111">
+						<input type="text" id="store_name" name="store_name" 
+							placeholder="사업자 번호를 입력해주세요 . ex)1111-서울서초-111111" readonly/>
 					</div>
 				</div>
 
@@ -135,7 +135,7 @@
 					</div>
 					<div class="col-75">
 						<input type="text" id="store_name" name="store_name"
-							placeholder="가게 이름(상호명)을 입력해 주세요.ex) 우리동네맛집">
+							placeholder="가게 이름(상호명)을 입력해 주세요.ex) 우리동네맛집" readonly/>
 					</div>
 				</div>
 
@@ -145,7 +145,7 @@
 					</div>
 					<div class="col-75">
 						<input type="text" id="store_ceo" name="store_ceo"
-							placeholder="대표자 이름을 입력하세요 ex)홍길동">
+							placeholder="대표자 이름을 입력하세요 ex)홍길동" readonly/>
 					</div>
 				</div>
 
