@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Storemapper">
+		<insert id="addStore" parameterType="model.Store" >
+		insert into
+		store_table(store_no,store_name,store_ceo,store_tel,store_addr,
+		store_category,store_photo,store_context,store_bn,order_count_male,order_count_female,
+		order_count_young,order_count_old)
+		values(#{store_no},#{store_name},#{store_ceo},#{store_tel},
+		#{store_addr},#{store_category},#{store_photo},#{store_context},#{store_bn},
+		#{order_count_male},#{order_count_female}
+		,#{order_count_young},#{order_count_old})
+	</insert>	
+	
+</mapper>

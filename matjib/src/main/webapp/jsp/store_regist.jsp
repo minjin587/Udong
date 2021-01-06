@@ -16,12 +16,12 @@
 	var sel_files = [];
 
 	$(document).ready(function() {
-		$("#input_imgs").on("change", handleImgFileSelect);
+		$("#image").on("change", handleImgFileSelect);
 	});
 
 	function fileUploadAction() {
 		console.log("fileUploadAction");
-		$("#input_imgs").trigger('click');
+		$("#image").trigger('click');
 	}
 
 	function handleImgFileSelect(e) {
@@ -73,7 +73,7 @@
 
 	function fileUploadAction() {
 		console.log("fileUploadAction");
-		$("#input_imgs").trigger('click');
+		$("#image").trigger('click');
 	}
 	/* <!-- 다중파일 전송--> */
 	function submitAction() {
@@ -106,8 +106,8 @@
 </head>
 <body>
 	<div class="store_container">
-		<form action="/action_page.php" method="post"
-			enctype="multipart/form-data">
+		<form action="../store/addStore.html" method="post"
+			enctype="multipart/form-data" id="fileupload" name="form">
 <!-- 업체등록이 완료된 경우에는 첫페이지가 관리페이지로 가야함 -->
 			<div class="sidebar">
 				<a class="active" href="#home">업체 등록</a>
@@ -124,7 +124,7 @@
 						<label for="store_name">사업자 번호 : </label>
 					</div>
 					<div class="col-75">
-						<input type="text" id="store_name" name="store_name"
+						<input type="text" id="store_bn" name="store_bn"
 							placeholder="사업자 번호를 입력해주세요 . ex)1111-서울서초-111111">
 					</div>
 				</div>
@@ -181,10 +181,10 @@
 
 				<div class="row">
 					<div class="col-25">
-						<label for="store_addr">업종분류 선택 : </label>
+						<label for="store_category">업종분류 선택 : </label>
 					</div>
 					<div class="col-75">
-						<select id="store_addr" name="store_addr">
+						<select id="store_category" name="store_category">
 							<option value="select">---- 선택하세요 ----</option>
 							<option value="korean">한식</option>
 							<option value="china">중식</option>
@@ -201,10 +201,10 @@
 
 				<div class="row">
 					<div class="col-25">
-						<label for="subject">업체 상세 설명 </label>
+						<label for="store_context">업체 상세 설명 </label>
 					</div>
 					<div class="col-75">
-						<textarea id="subject" name="subject"
+						<textarea id="store_context" name="store_context"
 							placeholder="업체의 메뉴 , 가격 , 특징 등 상세 설명을 해주세요 "
 							style="height: 200px"></textarea>
 					</div>
@@ -219,9 +219,9 @@
 						<div class="input_wrap">
 							<a href="javascript:" onclick="fileUploadAction();"
 								class="btn">파일 업로드</a><br/> 
-								<strong>※이미지는 최소 1개이상 선택해주세요.</strong> 
-								
-								<input type="file" id="input_imgs"	multiple />
+								<strong>※이미지는 최소 1개이상 선택해주세요.</strong>								
+								<input type="file" id="image" name="image" multiple />
+								<input type="text" name="src">
 						</div>
 				
 						<div>
