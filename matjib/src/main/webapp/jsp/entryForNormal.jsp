@@ -9,7 +9,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<script type="text/javascript">
+function validate(form){
+if (form.password.value != form.passwordCheck.value) {
+	alert("암호가 일치하지 않습니다.");
+	form.password.focus();
+	return false;
+}
+}
+</script>
 	<div class="">
 		<form action="../entry/entry.html" class="form" id="fileupload"
 			enctype="multipart/form-data" method="post">
@@ -65,6 +73,6 @@
 		</form>
 
 	</div>
-	<script src="../js/entry.js"></script>
+	<script type="text/javascript" src="../js/entry.js"></script>
 </body>
 </html>

@@ -22,9 +22,7 @@
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="../img/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
-
     <div class="qcontainer">
-   
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="user_id" class="login" required>
 

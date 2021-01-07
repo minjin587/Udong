@@ -20,6 +20,12 @@
 	<select id="getMaxIdNo" resultType="Integer">
 		select max(user_no) from user_table
 	</select>
+	<select id="getUser" parameterType = "String" resultType = "model.User">
+		select * from user_table where user_id = #{user_id}
+	</select>
+	<select id="getNickName" parameterType = "String" resultType = "String">
+		select nickname from user_table where nickname = #{nickname}
+	</select>
 	<!-- <insert id="upload" parameterType="model.User"> -->
 	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->
 

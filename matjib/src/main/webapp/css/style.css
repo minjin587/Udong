@@ -398,128 +398,43 @@ ul li {
 }
 .mypage-body {
 	overflow: hidden;
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    background: #f1f1f1;
 }
 .mypage-main {
-	float: left;
-	width: 30%;
-	margin: 50px 0px 300px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  background-color: #f1f1f1;  
+  height: 100%;
+  overflow: auto;
+  float:left;
 }
 .mypage-main h2 {
 	font-size: 35px;
 	text-align: center;
-	margin: 10px 10px 30px;
+	margin: 20px 10px 30px;
 }
-.mypage-item {
-	text-align: center;
-	font-size: 20px;
-	margin: 0px;
+.mypage-main a {
+	display: block;
+	color: black;
+	padding: 16px;
 }
-.mypage-item li{
-	margin: 10px 0px 10px;
-	border: none;
-	width: 150px;
+.mypage-main a.active {
+	background-color: #f0ad64;
+	color: white;
+}
+.mypage-main a:hover:not(.active){
+	background-color: #555;
+	color: white;
 }
 .mypage-content {
-	float: right;
-    width: 520px;
+  margin-left: 400px;
+  padding: 1px 16px;
+  height: 1000px;
 }
-.mypage-content h2 {
-	font-size: 25px;
-    height: 53px;
-    padding: 65px 0px 0px 0px;
-}
-.pw-pw {
-	padding: 10px 70px 10px 70px;
-    border-top: 2px solid #000000;
-    line-height: 20px;
-    text-align: center;
-}
-.pw-pwcheck {
-	position: relative;
-    overflow: hidden;
-    width: 668px;
-    height: 68px;
-    margin: 15px 0 0 0;
-    padding: 29px 0 0 0;
-}
-.pw-pwcheck dl {
-	overflow: hidden;
-    width: 523px;
-}
-.pw-pwcheck dt .pw {
-	padding-top: 12px;
-	padding-left: 15px;
-}
-.pw-pwcheck dd .pw {
-	margin-bottom: 10px;
-    position: absolute;
-    top: 31px;
-    right: 295px;
-}
-.pw-password {
-	width: 238px;
-    height: 30px;
-    font-size: 16px;
-}
-.mypage-user dd {
-	float: left;
-    width: 501px;
-}
-.ID dt {
-    clear: both;
-    float: left;
-    width: 130px;
-    font-size: 20px;
-    text-indent: 22px;
-}
-.ID dd {
-	float: left;
-    width: 390px;
-    padding: 20px 0;
-}
-.ID {
-	border-top: 2px solid #000000;
-    width: 670px;
-}
-.mypage-user .id dd.id1 {
-	padding: 21px 0;
-    width: 80px;
-    font-size: 20px;
-}
-.ID p {
-	text-align: left;
-	display: inline;
-}
-.userID-p {
-	max-width: 370px;
-}
-.user-ID {
-	padding-top: 20px;
-}
-.user-nick {
-	padding: 18px 0;
-    border-bottom: 0;
-}
-.user-name {
-	padding: 18px 0;
-    border-bottom: 0;
-}
-.user-phone {
-	padding: 18px 0;
-    border-bottom: 0;
-}
-.user-check {
-	padding: 18px 0;
-    border-bottom: 0;
-}
-.mypage-user .ID .link {
-	margin-left: 5px;
-	padding: 10px 12px 0 13px;
-    font-weight: bold;
-}
-
 
 
 

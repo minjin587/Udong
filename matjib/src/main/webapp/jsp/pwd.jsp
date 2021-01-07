@@ -5,37 +5,65 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+   href="${pageContext.request.contextPath}/css/mypage_pw.css">
 </head>
 <body>
+<script type="text/javascript">
+	function nameCheck() {
+		alert("11");
+		var url = "../nickname/nickcheck.html?NAME="+test.value;
+		alert("22");
+		window.open(url,"_blank","width=1000,height=500");
+	}
+</script>
 <div class = "mypage-user">
-	<h2>개인정보 변경</h2>
-	<dl class = "ID">
-		<dt class = "user-ID"><label>I D</label></dt>
-		<dd class = "id1">
-		<p class = "userID-p">
-			<span class = "userID"><span id = "userID-ID">test</span></span>
-		</p>
-		</dd>
-		<dt class = "user-nick"><label>닉네임</label></dt>
-		<dd>
-			<input type = "text" value = "test" name = "nickch" class = "inputnick">
-			<p class = "usernick-ch"><a href = "#" class = "link" title = "닉네임 변경"><span>닉네임 변경</span></a>
-		</dd>
-		<dt class = "user-name"><label>이름</label></dt>
-		<dd>
-			<span>test</span>
-		</dd>
-		<dt class = "user-phone"><label>휴대폰</label></dt>
-		<dd>
-			<span class = "phone"><span id = "phone-num">000-0000-0000</span></span>
-			<a href = "#" id = "phone" memberbutton = "true" class = "link" title = "휴대폰 변경">변경</a>
-			<a href = "#" id = "phonedid" memberbutton = "true" class = "link">삭제</a>
-		</dd>
-		<dt class = "user-check"><label>본인확인</label></dt>
-		<dd>
-			test
-		</dd>
-	</dl>
+	<div class = "user-main">
+		<div class = "col-1">
+			<label for = "user-id">I D</label>
+		</div>
+		<div class = "col-2">
+			<span class = "col-3">
+				<span >${USER.user_id }</span>
+			</span>
+		</div>
+		<div class = "col-1">
+			<label for = "user-nick">닉네임</label> 
+		</div>
+		<div class = "col-2">
+			<span class = "col-3 col-4">
+				<input type = "text" id = "test" placeholder="test" value = "${USER.nickname }">
+				<button class = "sss" onclick="nameCheck()">변경</button>
+			</span>
+		</div>
+		<div class = "col-1">
+			<label for = "user-name">이 름</label>
+		</div>
+		<div class = "col-2">
+			<span class = "col-3">
+				<span >${USER.name }</span>
+			</span>
+		</div>
+		<div class = "col-1">
+			<label for = "user-phone">휴대폰</label>
+		</div>
+		<div class = "col-2">
+			<span class = "col-3 col-4">
+				<span >${USER.phone }</span>
+				<button class = "">변경</button>
+				<button class = "">삭제</button>
+			</span>
+		</div>
+		<div class = "col-1">
+			<label for = "user-check">본인확인</label>
+		</div>
+		<div class = "col-2">
+			<span class = "col-3">
+				<span >test</span>
+			</span>
+		</div>
+		<input class = "submit" type = "submit" value = "저장"/>
+	</div>
 </div>
 </body>
 </html>

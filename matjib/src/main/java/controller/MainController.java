@@ -1,5 +1,7 @@
 package controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,10 +39,8 @@ public class MainController {
 	   }
 	//마이페이지
 	@RequestMapping(value= "/jsp/mypage.html")
-	public ModelAndView Mypage() {
-		ModelAndView mav = new ModelAndView("jsp/template");
-		mav.addObject("BANNER","banner_mypage.jsp");
-		mav.addObject("BODY","mypage.jsp");
+	public ModelAndView Mypage(User user , HttpSession session) {
+		ModelAndView mav = new ModelAndView("jsp/mypage");
 		return mav;
 	}
 	

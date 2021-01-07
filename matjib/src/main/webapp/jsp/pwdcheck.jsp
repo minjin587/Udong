@@ -1,26 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+   href="${pageContext.request.contextPath}/css/mypage_pw.css">
 </head>
+<script type="text/javascript">
+function test() {
+	location.href="../jsp/mypagemain.html?user_id=${loginUser}";
+}
+</script>
 <body>
 	<div class = "pw-content">
 		<h2>개인정보 변경</h2>
 		<p class = "pw-pw">개인정보를 변경하기 위해 본인확인을 진행합니다 비밀번호를 입력하세요.</p>
 		<div class = "pw-pwcheck">
-			<dl>
-				<dt class = "pw">
-					<label>비밀번호 확인</label>
-				</dt>
-				<dd class = "pw">
-					<input name = "pw-password">
-					<input type = "hidden" name = "pw-id">
-				</dd>
-			</dl>
-			<p class = "pw-button"><button type = "button">확인</button>
+			<form method = "post" action = "../jsp/mypagemain.html">
+				<label>비밀번호 확인</label>
+				<input name = "pw-password" type = "password">
+				<input type = "hidden" name = "user_id" value = "${loginUser }">
+				<button type = "submit">확인</button>
+			</form>
 		</div>
 	</div>
 </body>
