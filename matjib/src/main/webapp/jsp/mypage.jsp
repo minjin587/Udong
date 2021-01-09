@@ -74,10 +74,10 @@ function fuck(){
 	<div class = "mypage-body">
 		<div class ="mypage-main">
 			<h2>내 정보관리</h2>
-        	<a class="active" href="#home">개인정보 변경</a>
-         	<a href="#">비밀번호 변경</a> 
-			<a href="#">결제정보 확인</a>
-      	   	<a href="#">예약정보 확인</a>
+        	<a class="active" href="../jsp/mypage.html">개인정보 변경</a>
+         	<a href="../jsp/password.html">비밀번호 변경</a> 
+			<a href="../jsp/kakunin.html">결제정보 확인</a>
+      	   	<a href="../jsp/yoya.html">예약정보 확인</a>
 		</div>
 		<div class = "mypage-content">
 			<c:choose>

@@ -7,7 +7,6 @@
 		insert into
 		user_table(user_no,user_id,password,name,nickname,
 		birth,gender,phone,email,profile,grade)values(#{user_no},#{user_id},#{password},#{name},#{nickname},#{birth},#{gender},#{phone},#{email},#{profile},#{grade})
-
 	</insert>
 	<select id="getPassword" resultType="String"
 		parameterType="String">
@@ -25,6 +24,9 @@
 	</select>
 	<select id="getNickName" parameterType = "String" resultType = "String">
 		select nickname from user_table where nickname = #{nickname}
+	</select>
+	<select id="getPhone" parameterType = "String" resultType = "String">
+		select phone from user_table where phone = #{phone}
 	</select>
 	<!-- <insert id="upload" parameterType="model.User"> -->
 	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->

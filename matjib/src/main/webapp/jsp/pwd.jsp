@@ -11,9 +11,11 @@
 <body>
 <script type="text/javascript">
 	function nameCheck() {
-		alert("11");
-		var url = "../nickname/nickcheck.html?NAME="+test.value;
-		alert("22");
+		var url = "../nickname/nickcheck.html?NAME="+chan.value;
+		window.open(url,"_blank","width=1000,height=500");
+	}
+	function phoneCheck() {
+		var url = "../phone/phonecheck.html?PHONE="+ph.value;
 		window.open(url,"_blank","width=1000,height=500");
 	}
 </script>
@@ -32,7 +34,7 @@
 		</div>
 		<div class = "col-2">
 			<span class = "col-3 col-4">
-				<input type = "text" id = "test" placeholder="test" value = "${USER.nickname }">
+				<input type = "text" id = "chan" name="nickname" placeholder="닉네임을 입력해주세요" value = "${USER.nickname }">
 				<button class = "sss" onclick="nameCheck()">변경</button>
 			</span>
 		</div>
@@ -49,8 +51,10 @@
 		</div>
 		<div class = "col-2">
 			<span class = "col-3 col-4">
-				<span >${USER.phone }</span>
-				<button class = "">변경</button>
+<%-- 				<input type = "hidden" id = "phone" name = "phone" value = "${USER.phone }"> --%>
+<%-- 				<span >${USER.phone }</span> --%>
+				<input type = "text" id = "ph" name = "phone" placeholder="저장된 번호가 없습니다" value = "${USER.phone }">
+				<button class = "sss2" onclick="phoneCheck()">변경</button>
 				<button class = "">삭제</button>
 			</span>
 		</div>

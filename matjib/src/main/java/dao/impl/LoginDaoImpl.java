@@ -28,12 +28,15 @@ public class LoginDaoImpl implements LoginDao {
 	public void entryUser(User user) {
 		session.insert("mapper.Usermapper.insertUser", user);
 	}
-	
 	public User getUser(String user_id) {
 		return session.selectOne("mapper.Usermapper.getUser", user_id);
 	}
 	public String getNickName(String nickname) {
 		return session.selectOne("mapper.Usermapper.getNickName", nickname);
+	}
+
+	public String getPhone(String phone) {
+		return session.selectOne("mapper.Usermapper.getPhone", phone);
 	}
 	
 }

@@ -14,7 +14,7 @@
          <div class="content">      
          <div class="row">
             <div class="col-25">
-               <label for="store_name">호아아아악이이이이인 : </label>
+               <label for="store_name">예에에에에야약 : </label>
             </div>
             <div class="col-75">
                <input type="text" id="store_name" name="store_name"

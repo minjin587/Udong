@@ -10,4 +10,5 @@ public interface LoginDao{
 	String getGrade(String user_id);
 	User getUser(String user_id);
 	String getNickName(String nickname);
+	String getPhone(String phone);
 }

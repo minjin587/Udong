@@ -9,11 +9,6 @@
 <link rel="stylesheet" type="text/css"
    href="${pageContext.request.contextPath}/css/mypage_pw.css">
 </head>
-<script type="text/javascript">
-function test() {
-	location.href="../jsp/mypagemain.html?user_id=${loginUser}";
-}
-</script>
 <body>
 	<div class = "pw-content">
 		<h2>개인정보 변경</h2>
@@ -21,9 +16,9 @@ function test() {
 		<div class = "pw-pwcheck">
 			<form method = "post" action = "../jsp/mypagemain.html">
 				<label>비밀번호 확인</label>
-				<input name = "pw-password" type = "password">
-				<input type = "hidden" name = "user_id" value = "${loginUser }">
-				<button type = "submit">확인</button>
+				<input type = "hidden" name = "user_id" value = "${loginUser }"/>
+				<input name = "password" id = "pwd" type = "password">
+				<button type = "submit" onclick="test()">확인</button>
 			</form>
 		</div>
 	</div>
