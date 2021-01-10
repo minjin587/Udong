@@ -66,7 +66,7 @@
 				<span >test</span>
 			</span>
 		</div>
-		<input class = "submit" type = "submit" value = "저장"/>
+		<a href = "../mypageCh/mypageCh.html"><input class = "submit" type = "submit" value = "저장"/></a>
 	</div>
 </div>
 </body>

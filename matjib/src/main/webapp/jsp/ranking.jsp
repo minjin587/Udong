@@ -31,8 +31,7 @@
 						<div class = "list-content">
 							<figure class = "image-item">
 								<div class = "image-list"> 
-									<img class = "imagelist-item" alt="" src="../img/slide1.png">
-								</div>
+									<a href="../jsp/kakunin.html"><img class = "imagelist-item" alt="" src="../img/slide1.png"/></a>						</div>
 								<figcaption>
 									<div class = "info">
 										<spen class = "title">³²ÀÚ</spen>

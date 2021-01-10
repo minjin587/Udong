@@ -2,6 +2,8 @@ package model;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import dao.LoginDao;
+
 public class User {
 	private Integer user_no;
 	private String user_id;
@@ -116,5 +118,8 @@ public class User {
 	public void setImage(MultipartFile image) {
 		this.image = image;
 	}
+	
+	
+	
 	
 }

@@ -38,5 +38,9 @@ public class LoginDaoImpl implements LoginDao {
 	public String getPhone(String phone) {
 		return session.selectOne("mapper.Usermapper.getPhone", phone);
 	}
+
+	public void setMypage(User user_id) {
+		session.update("mapper.Usermapper.setMypage",user_id);
+	}
 	
 }

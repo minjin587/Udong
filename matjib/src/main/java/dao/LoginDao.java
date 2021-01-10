@@ -11,4 +11,5 @@ public interface LoginDao{
 	User getUser(String user_id);
 	String getNickName(String nickname);
 	String getPhone(String phone);
+	void setMypage(User user_id);
 }

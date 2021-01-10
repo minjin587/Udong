@@ -75,8 +75,8 @@ function fuck(){
 		<div class ="mypage-main">
 			<h2>내 정보관리</h2>
         	<a class="active" href="../jsp/mypage.html">개인정보 변경</a>
-         	<a href="../jsp/password.html">비밀번호 변경</a> 
-			<a href="../jsp/kakunin.html">결제정보 확인</a>
+         	<a href="../jsp/password.html">비밀번호 변경</a>
+			<a href="../main/ranking.html">결제정보 확인</a>
       	   	<a href="../jsp/yoya.html">예약정보 확인</a>
 		</div>
 		<div class = "mypage-content">

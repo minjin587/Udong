@@ -9,7 +9,7 @@
 <body>
 <ul class="project_list">
            <li>  
-                <a href="../main/ranking.html"><img src="../img/Ranking_main.jpg" alt="image3"/>
+                <a href="#"><img src="../img/Ranking_main.jpg" alt="image3"/>
                 </a>                
                <!--  <div class="hover_content">   
                 	<h4>Hover Test!</h4>
