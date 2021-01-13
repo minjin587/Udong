@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.LoginDao;
-import model.Mypage;
 import model.User;
 
 @Controller
 public class MyPageController {
 	@Autowired
 	private LoginDao logindao;
-	private Mypage u;
 	
 	@RequestMapping(value = "/jsp/yoya.html")
 	public ModelAndView yayo() {
@@ -61,15 +59,15 @@ public class MyPageController {
 		return mav;
 	}
 	@RequestMapping(value = "/nickname/nickcheck.html",method=RequestMethod.GET)
-	public ModelAndView nickcheck(String NAME) {
+	public ModelAndView nickcheck(String nickname) {
 		ModelAndView mav = new ModelAndView("jsp/nickCheck");
-		String cnt = logindao.getNickName(NAME);
+		String cnt = logindao.getNickName(nickname);
 		if(cnt == null) {
-			mav.addObject("NICK","OK");
+			mav.addObject("nickname","OK");
 		} else {
-			mav.addObject("NICK","NO");
+			mav.addObject("nickname","NO");
 		}
-		mav.addObject("NAME",NAME);
+		mav.addObject("nick",nickname);
 		return mav;
 	}
 	@RequestMapping(value = "/phone/phonecheck.html", method=RequestMethod.GET)
@@ -85,14 +83,11 @@ public class MyPageController {
 		return mav;
 	}
 	@RequestMapping(value = "/mypageCh/mypageCh.html")
-	public ModelAndView mypageCh(String ph, String chan, HttpSession session) {
+	public ModelAndView mypageCh(HttpSession session,User user) {
 		ModelAndView mav = new ModelAndView("jsp/mypage");
-		String tes2 = (String)session.getAttribute(ph);
-		String tes1 = (String)session.getAttribute(chan);
-		System.out.println(tes2);
-		System.out.println(tes1);
-		String id = (String)session.getAttribute("loginUser");
-		u.modifyItem(chan, ph, id);
+		String user_id= (String)session.getAttribute("loginUser");
+		user.setUser_id(user_id);
+		logindao.setMypage(user);
 		return mav;	
 	}
 }

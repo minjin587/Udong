@@ -1,0 +1,84 @@
+@charset "EUC-KR";
+@import url(resetCss.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Song+Myung&display=swap");
+
+
+
+.detail_inner{
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #ffffff;
+  
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  border-top: 1px solid #c0c0c0; 
+  border-bottom: 1px solid #c0c0c0;  
+}
+
+.main p {
+	margin-top:20px;
+	text-align:left;
+	font-size:15px;
+}
+
+.main h1 {
+	font-size:30px;
+}
+
+.main h3{
+	font-size:20px;	
+}
+.side ul li {
+  
+  width: 100%;
+  padding: 0px;
+  height:190px;
+  margin:20px;
+}
+.side img {
+	width:85%;
+	height:100%;
+}
+
+
+
+

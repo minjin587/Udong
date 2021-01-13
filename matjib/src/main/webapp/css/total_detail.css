@@ -1,0 +1,141 @@
+@charset "EUC-KR";
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn { 
+  display:flex;
+  float: left;
+  width: 75%;
+  margin-bottom:20px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;  
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 30%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+}
+.card2{
+	background-color:white;
+	padding: 20px;
+	margin-top :5px;
+}
+.leftcolumn p{
+	text-align:center;
+}
+.review_row{
+	flex:30%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn, reviewcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #ffffff;
+  
+}
+.side ul li {  
+  width: 100%;
+  padding: 0px;
+  height:200px;
+  margin:20px;
+}
+.side img {
+	width:200px;
+	/* height:200px; */
+	margin-left:250px;	
+	
+}
+.review ul li {  
+  width: 100%;
+  padding: 0px; 
+  margin:20px;
+}
+.review{
+  -ms-flex: 30%; /* IE10 */
+  flex: -1%;
+  background-color: #ffffff;
+}
+
+.review img{
+	width:100px;
+	
+}
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  border-top: 1px solid #c0c0c0; 
+  border-bottom: 1px solid #c0c0c0;  
+}
+
+.review_main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+    
+}
+.main p {
+	margin-top:20px;
+	text-align:left;
+	font-size:15px;
+}
+
+.main h1 {
+	font-size:30px;
+}
+
+.main h3{
+	font-size:20px;	
+}
+.reviewcolumn{  
+  display:flex;
+  float: left;
+  width: 90%;
+  margin-bottom:20px;
+  
+}
+.checked {
+  color: orange;
+}

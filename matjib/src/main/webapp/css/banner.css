@@ -71,5 +71,15 @@ nav ul li a {
   text-decoration: none;
   font: normal bold 14px/54px "Song Myung", serif;
 }
+* {
+  box-sizing: border-box;
+}
+
+.seperate {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
 
 /* BANNNER-START*/

@@ -29,12 +29,15 @@ public class LoginController {
 		}
 		String password = loginDao.getPassword(user.getUser_id());
 		String grade = loginDao.getGrade(user.getUser_id());
+		Integer user_no=loginDao.getUser_no(user.getUser_id());
+	    Integer store_no=loginDao.getStore_no(user_no);
 		if (password == null || !user.getPassword().equals(password)) {
 			JOptionPane.showMessageDialog(null, "아이디와 암호를 확인하세요.");
 		} else {
 			session.setAttribute("loginUser", user.getUser_id());
 			session.setAttribute("grade",grade);
-
+			session.setAttribute("user_no",user_no);
+	        session.setAttribute("store_no",store_no);
 		}
 		return mav;
 	}

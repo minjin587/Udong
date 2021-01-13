@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function idOk(){
-	opener.document.getElementById("chan").value = document.getElementById("name").value
+	opener.document.getElementById("nickname").value = document.getElementById("nickname").value
 	self.close();
 }
 </script>
@@ -16,16 +16,16 @@ function idOk(){
 <body>
 <h2 align = "center">중복확인</h2>
 <form action = "../nickname/nickcheck.html" method = "get" name = "test">
-아이디: <input type= "text" id = "name" name = "NAME" value = "${NAME }"/>
+아이디: <input type= "text" id = "nickname" name = "nickname" value = "${nick }"/>
 <input type = "submit" value = "중복 검사"/><br/>
-<c:if test="${NICK != 'OK' }">
+<c:if test="${nickname != 'OK' }">
 <!-- 	<script type="text/javascript"> -->
 <!--  		opener.test.value = ""; -->
 <!-- 	</script> -->
-	${NAME }는 이미 사용중입니다
+	${nick }는 이미 사용중입니다
 </c:if>
-<c:if test="${NICK == 'OK' }">
-	${NAME }는 사용 가능합니다
+<c:if test="${nickname == 'OK' }">
+	${nick }는 사용 가능합니다
 	<input type = "button" value = "사용" onClick="idOk()"/>
 </c:if>
 </form>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Storemapper">
+	<update id="updateStore_regist" parameterType="model.Store">
+		update store_table
+		set
+		store_ceo=#{store_ceo},store_tel=#{store_tel},store_addr=#{store_addr},
+		store_category=#{store_category},store_context=#{store_context}
+		where store_no = #{store_no}
+	</update>
+
+	<insert id="addStore" parameterType="model.Store">
+		insert into
+		store_table(user_no,store_no,store_name,store_ceo,store_tel,store_addr,
+		store_category,store_context,store_bn,order_count_male,order_count_female,
+		order_count_young,order_count_old, main_image)
+		values(#{user_no},#{store_no},#{store_name},#{store_ceo},#{store_tel},
+		#{store_addr},#{store_category},#{store_context},#{store_bn},
+		#{order_count_male},#{order_count_female}
+		,#{order_count_young},#{order_count_old},#{main_image})
+	</insert>
+
+	<select id="getMaxStoreNo" resultType="Integer">
+		select max(store_no) from store_table
+	</select>
+
+	<select id="getStore_no" resultType="Integer"
+		parameterType="String">
+		select store_no from store_table where user_no=#{user_no}
+	</select>
+
+	<select id="getStore" resultType="model.Store"
+		parameterType="Integer">
+		select * from store_table where store_no = #{store_no}
+	</select>
+
+	<select id="findStore" resultType="model.Store">
+		select * from store_table
+
+	</select>
+
+</mapper>

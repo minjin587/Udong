@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.LoginDao;
+import dao.StoreDao;
+import model.Store;
 import model.User;
 
 @Controller
 public class MainController {
 	@Autowired
 	private LoginDao loginDao;
+	@Autowired
+	private StoreDao storeDao;
 	
+	@RequestMapping(value = "/main/total.html", method = RequestMethod.GET)
+	public ModelAndView total() {
+		ModelAndView mav = new ModelAndView("jsp/template");
+
+		List<Store> StoreList = storeDao.findStore();
+		mav.addObject("storeList", StoreList);
+		mav.addObject("BANNER", "banner_login.jsp");
+		mav.addObject("BODY", "main_total.jsp");
+		return mav;
+	}
 	//로그인
 	@RequestMapping(value="/login/login.html",
 			method=RequestMethod.GET)
@@ -95,8 +111,7 @@ public class MainController {
 	// 첫화면 매핑 (Index 와 template)
 	@RequestMapping(value="/main/template.html",method=RequestMethod.GET)
 	public ModelAndView template() {
-		ModelAndView mav = new ModelAndView(
-				"jsp/template");		
+		ModelAndView mav = new ModelAndView("jsp/template");		
 		return mav;
 	}
 }

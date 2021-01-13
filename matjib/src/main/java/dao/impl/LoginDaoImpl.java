@@ -42,5 +42,21 @@ public class LoginDaoImpl implements LoginDao {
 	public void setMypage(User user_id) {
 		session.update("mapper.Usermapper.setMypage",user_id);
 	}
+
+	public Integer getIdCount(String id) {
+		return session.selectOne("mapper.Usermapper.getIdCount",id);
+	}
+
+	public Integer getNicknameCount(String nickname) {
+		return session.selectOne("mapper.Usermapper.getNicknameCount",nickname);
+	}
+
+	public Integer getUser_no(String user_id) {
+		return session.selectOne("mapper.Usermapper.getUser_no",user_id);
+	}
+
+	public Integer getStore_no(Integer user_no) {
+		return session.selectOne("mapper.Storemapper.getStore_no",user_no);
+	}
 	
 }

@@ -9,7 +9,7 @@
 <body>
 <ul class="project_list">
            <li>  
-                <a href="#"><img src="../img/Ranking_main.jpg" alt="image3"/>
+                <a href="../main/ranking.html"><img src="../img/Ranking_main.jpg" alt="image3"/>
                 </a>                
                <!--  <div class="hover_content">   
                 	<h4>Hover Test!</h4>
@@ -17,7 +17,7 @@
                 </div> -->
             </li>
             <li>
-                <a href="#"><img src="../img/Local_main.jpg" alt="image explane"/>
+                <a href="../main/total.html"><img src="../img/total_main.jpg" alt="image explane"/>
                 </a>             
             </li>
             <li>
@@ -27,7 +27,8 @@
             <li>  
                 <a href="#"><img src="../img/Recommand_main.jpg" alt="image3"/>
                 </a>               
-            </li>    
+            </li>  
+              
         </ul>
 </body>
 </html>

@@ -39,5 +39,7 @@ class=
 	        <property name="prefix" value="/"/>
 	        <property name="suffix" value=".jsp"/>
 	</bean>
-	
+	<bean id="uploadPath" class="java.lang.String">
+		<constructor-arg value="C:\\Users\\HOME\\Desktop\\photo\\project"/>			
+	</bean>
 </beans>

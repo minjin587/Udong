@@ -28,9 +28,19 @@
 	<select id="getPhone" parameterType = "String" resultType = "String">
 		select phone from user_table where phone = #{phone}
 	</select>
-	<update id="setMypage">
-		update user_table set nickname = ${nickname}, phone = ${phone} where user_id = ${user_id}
+	<update id="setMypage" parameterType = "model.User">
+		update user_table set nickname = #{nickname}, phone = #{phone} where user_id = #{user_id}
 	</update>
+	<select id="getUser_no" resultType="Integer" parameterType="String">
+      select user_no from user_table where user_id=#{user_id}
+    </select>
+	<select id="getNicknameCount" parameterType="String" resultType="Integer">
+      select count(*) as cnt from user_table where nickname = #{nickname}
+    </select>
+    <select id="getIdCount" parameterType="String" resultType="Integer">
+      select count(*) as cnt from user_table where user_id = #{user_id}
+    </select>
+	
 	<!-- <insert id="upload" parameterType="model.User"> -->
 	<!-- insert into album values(#{photo_no},#{profile},#{user_no}) -->
 

@@ -3,12 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+function test() {
+	var s = document.querySelector("#test");
+	s.classList.add("active");
+}	
+</script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
    href="${pageContext.request.contextPath}/css/mypage_regist.css">
 </head>
-<body>
+<body onload="test()">
    <div class="store_container">
       <form action="/action_page.php">                
          <div class="content">      

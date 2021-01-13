@@ -5,7 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" type="text/css"
-   href="${pageContext.request.contextPath}/css/loginForm.css">
+	href="${pageContext.request.contextPath}/css/loginForm.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
 </head>
@@ -22,18 +22,20 @@
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="../img/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
+
     <div class="qcontainer">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user_id" class="login" required>
+      <input type="text" placeholder="Enter Username" name="user_id" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" class="password" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
         
       <button type="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
-      </div>
+    </div>
+
     <div class="qcontainer" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
@@ -52,6 +54,5 @@ window.onclick = function(event) {
     }
 }
 </script>
-
 </body>
 </html>

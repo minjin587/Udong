@@ -26,6 +26,12 @@
 
 </head>
 <script>
+$(document).ready(function(){
+	$("a").click(function(){
+		$("test").addclass("active");
+		
+	});
+});
 function fuck(){
 	alert("내 정보를 확인할려면 로그인을 먼저 해야합니다.");
 	return false;
@@ -74,10 +80,10 @@ function fuck(){
 	<div class = "mypage-body">
 		<div class ="mypage-main">
 			<h2>내 정보관리</h2>
-        	<a class="active" href="../jsp/mypage.html">개인정보 변경</a>
-         	<a href="../jsp/password.html">비밀번호 변경</a>
-			<a href="../main/ranking.html">결제정보 확인</a>
-      	   	<a href="../jsp/yoya.html">예약정보 확인</a>
+        	<a class="active" href="../jsp/mypage.html" id = "test">개인정보 변경</a>
+         	<a href="../jsp/password.html"id= "test">비밀번호 변경</a>
+			<a href="../main/ranking.html" id= "test">결제정보 확인</a>
+      	   	<a href="../jsp/yoya.html" id = "test" onclick="test()">예약정보 확인</a>
 		</div>
 		<div class = "mypage-content">
 			<c:choose>
