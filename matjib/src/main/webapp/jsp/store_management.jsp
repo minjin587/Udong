@@ -13,6 +13,16 @@
 <script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"
 	charset="utf-8"></script>
 <script type="text/javascript">
+
+	/* var cate = document.getElementById("store_category");
+	var store_category = cate.option[cate.selectedindex].value;
+	
+	function getCategory(){
+		$("#store_category:selected").val();
+	} */
+	
+	
+	
 	var sel_files = [];
 
 	$(document).ready(function() {
@@ -106,9 +116,9 @@
 </head>
 <body>
 <div class="store_container">
-		<form action="/action_page.php" method="post"
-			enctype="multipart/form-data">
-
+		<form action="../store/store_update.html" method="post"
+			enctype="multipart/form-data"
+>
 			<div class="sidebar">
 				<a class="#" href="../jsp/storedetail.html">업체 등록</a> 
 				<a class="active" href="#home">업체 관리</a> 
@@ -118,14 +128,14 @@
 
 
 			<div class="content">
-
+						
 				<div class="row">
 					<div class="col-25">
 						<label for="store_name" >사업자 번호 : </label>
 					</div>
 					<div class="col-75">
-						<input type="text" id="store_name" name="store_name" 
-							placeholder="사업자 번호를 입력해주세요 . ex)1111-서울서초-111111" readonly/>
+						<input type="text" id="store_bn" name="store_bn" 
+							value="${STORE.store_bn }"readonly/>
 					</div>
 				</div>
 
@@ -135,7 +145,8 @@
 					</div>
 					<div class="col-75">
 						<input type="text" id="store_name" name="store_name"
-							placeholder="가게 이름(상호명)을 입력해 주세요.ex) 우리동네맛집" readonly/>
+							value="${STORE.store_name }" readonly/>
+							
 					</div>
 				</div>
 
@@ -145,7 +156,7 @@
 					</div>
 					<div class="col-75">
 						<input type="text" id="store_ceo" name="store_ceo"
-							placeholder="대표자 이름을 입력하세요 ex)홍길동" readonly/>
+							value="${STORE.store_ceo }" placeholder="대표자 이름을 변경하시려면 새로운 이름을 입력해주세요 " />
 					</div>
 				</div>
 
@@ -155,7 +166,7 @@
 					</div>
 					<div class="col-75">
 						<input type="text" id="store_tel" name="store_tel"
-							placeholder="전화번호를 입력하세요 .ex)010-1234-5678">
+							value="${STORE.store_tel }" placeholder="변경하실 전화번호를  입력하세요 .ex)010-1234-5678">
 					</div>
 				</div>
 
@@ -172,7 +183,7 @@
 							<option value="jongro">종로</option>
 							<option value="ansan">안산</option>
 							<option value="anyang">안양</option>
-							<option value="jansil">잠실</option>
+							<option value="jamsil">잠실</option>
 							<option value="gangnam">강남</option>
 							<option value="hongdae">홍대</option>
 						</select>
@@ -181,10 +192,10 @@
 
 				<div class="row">
 					<div class="col-25">
-						<label for="store_addr">업종분류 선택 : </label>
+						<label for="store_category">업종분류 선택 : </label>
 					</div>
 					<div class="col-75">
-						<select id="store_addr" name="store_addr">
+						<select id="store_category" name="store_category">														
 							<option value="select">---- 선택하세요 ----</option>
 							<option value="korean">한식</option>
 							<option value="china">중식</option>
@@ -194,19 +205,19 @@
 							<option value="snackbar">분식</option>
 							<option value="midnight">야식</option>
 							<option value="desset">디저트/카페</option>
-							<option value="otc">기타</option>
+							<option value="otc">기타</option>							
 						</select>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-25">
-						<label for="subject">업체 상세 설명 </label>
+						<label for="store_context">업체 상세 설명 </label>
 					</div>
 					<div class="col-75">
-						<textarea id="subject" name="subject"
+						<textarea id="store_context" name="store_context" 
 							placeholder="업체의 메뉴 , 가격 , 특징 등 상세 설명을 해주세요 "
-							style="height: 200px"></textarea>
+							style="height: 200px">${STORE.store_context }</textarea>
 					</div>
 				</div>
 				<!-- 이미지 등록 -->
@@ -221,14 +232,13 @@
 								class="btn">파일 업로드</a><br/> 
 								<strong>※이미지는 최소 1개이상 선택해주세요.</strong> 
 								
-								<input type="file" id="input_imgs"	multiple />
+								<input type="file" id="input_imgs" name="input_imgs"	multiple />
 						</div>
 				
 						<div>
 							<div class="imgs_wrap">
 								<img id="img" />
-							</div>
-							<a href="javascript:" class="btn" onclick="submitAction();">btn</a>
+							</div>							
 						</div>
 
 					</div>

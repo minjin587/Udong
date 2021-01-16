@@ -17,11 +17,11 @@
                 </div> -->
             </li>
             <li>
-                <a href="#"><img src="../img/Local_main.jpg" alt="image explane"/>
+                <a href="../main/total.html"><img src="../img/total_main.jpg" alt="image explane"/>
                 </a>             
             </li>
             <li>
-                <a href="#"><img src="../img/Category_main.jpg" alt="image2"/>
+                <a href="../main/category.html"><img src="../img/Category_main.jpg" alt="image2"/>
                 </a>                
             </li>
             <li>  

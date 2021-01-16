@@ -1,17 +1,9 @@
 package model;
 
-import java.util.List;
-
 import org.springframework.web.multipart.MultipartFile;
 
 public class Store {
-	private Integer store_no;
-	public Integer getStore_no() {
-		return store_no;
-	}
-	public void setStore_no(Integer store_no) {
-		this.store_no = store_no;
-	}
+	private Integer store_no;	
 	private String store_name;
 	private String store_bn;
 	private String store_ceo;
@@ -19,19 +11,57 @@ public class Store {
 	private String store_addr;
 	private String store_category;
 	private String store_context;
-	private List<MultipartFile> image;
-	private List<String> store_photo;
+	private Integer order_count_male;
+	private Integer order_count_female;
+	private Integer order_count_young;
+	private Integer order_count_old;
+	private Integer user_no;
+	private String main_image;	
+	private MultipartFile thumbnail;
 	
+	
+	public Integer getStore_no() {
+		return store_no;
+	}
+	public void setStore_no(Integer store_no) {
+		this.store_no = store_no;
+	}
+	public Integer getUser_no() {
+		return user_no;
+	}
+	public void setUser_no(Integer user_no) {
+		this.user_no = user_no;
+	}
+	
+	public String getMain_image() {
+		return main_image;
+	}
+	public void setMain_image(String main_image) {
+		this.main_image = main_image;
+	}
+	public MultipartFile getThumbnail() {
+		return thumbnail;
+	}
+	public void setThumbnail(MultipartFile thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+	//private List<MultipartFile> image;
+	//private List<String> store_photo;
+	/*
 	public List<String> getStore_photo() {
 		return store_photo;
 	}
 	public void setStore_photo(List<String> store_photo) {
 		this.store_photo = store_photo;
 	}
-	private Integer order_count_male;
-	private Integer order_count_female;
-	private Integer order_count_young;
-	private Integer order_count_old;
+	
+	public List<MultipartFile> getImage() {
+		return image;
+	}
+	public void setImage(List<MultipartFile> image) {
+		this.image = image;
+	}
+	*/
 	public Integer getOrder_count_male() {
 		return order_count_male;
 	}
@@ -98,12 +128,6 @@ public class Store {
 	}
 	public void setStore_context(String store_context) {
 		this.store_context = store_context;
-	}
-	public List<MultipartFile> getImage() {
-		return image;
-	}
-	public void setImage(List<MultipartFile> image) {
-		this.image = image;
 	}
 	
 	

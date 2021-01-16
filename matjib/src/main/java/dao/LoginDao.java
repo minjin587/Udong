@@ -3,8 +3,13 @@ package dao;
 import model.User;
 
 public interface LoginDao{
-	void entryUser(User user);
-	String getPassword(String user_id);
-	Integer getMaxIdNo();
-	String getGrade(String user_id);
+   void entryUser(User user);
+   String getPassword(String user_id);
+   Integer getMaxIdNo();
+   String getGrade(String user_id);
+   Integer getIdCount(String id);
+   Integer getNicknameCount(String nickname);
+   Integer getUser_no(String user_id);
+   Integer getStore_no(Integer user_no);
+   User getUser(String user_id);
 }

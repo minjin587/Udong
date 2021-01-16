@@ -41,7 +41,8 @@ class=
 	</bean>
 	<!-- 파일 업로드 디렉토리 설정 -->
 	<bean id="uploadPath" class="java.lang.String">
-		<constructor-arg value="C:\\Users\\Uk\\Desktop\\UdongProject\\uploadImage"/>	
+		<constructor-arg value="C:\\Users\\Uk\\Desktop\\UdongProject\\uploadImage"/>			
 	</bean>
+	
 	
 </beans>

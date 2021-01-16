@@ -1,12 +1,13 @@
 @charset "EUC-KR";
 
-<style>
+
 * {
   box-sizing: border-box;
 }
 
 /* <!-- 파일 업로드 --> */
-	 input[type=file] {
+
+	 .input_wrap input[type=file] {
             display: none;
         }
 
@@ -27,7 +28,8 @@
             padding-top: 10px;
             padding-bottom: 10px;
 
-        }
+        }        
+        
         .imgs_wrap img {
         	width:150px;
         	height:150px;
@@ -35,6 +37,23 @@
             margin-left: 10px;
             margin-right: 10px;
         }
+        
+        .imgs_wrap2{
+        	margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .imgs_wrap2 img{
+ 	        width:150px;
+        	height:150px;
+            max-width: 150px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        
         
 input[type=text], select, textarea {
   width: 100%;

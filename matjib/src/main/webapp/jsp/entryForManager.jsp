@@ -144,7 +144,7 @@ if (form.password.value != form.passwordCheck.value) {
 			</div>
 			
 			<div class="store_bottom">
-				<input type="hidden" name="grade" value="N">
+				<input type="hidden" name="grade" value="M">
 				<input type="submit" value="가입하기">
 			</div>
 			</div>
