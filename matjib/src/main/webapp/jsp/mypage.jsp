@@ -26,12 +26,6 @@
 
 </head>
 <script>
-$(document).ready(function(){
-	$("a").click(function(){
-		$("test").addclass("active");
-		
-	});
-});
 function fuck(){
 	alert("내 정보를 확인할려면 로그인을 먼저 해야합니다.");
 	return false;
@@ -53,7 +47,9 @@ function fuck(){
                <c:if test="${sessionScope.loginUser != null }">
                <li><a href="../logout/template.html" class="login">로그아웃</a></li>
                </c:if>
+                <c:if test="${sessionScope.loginUser == null }">
                <li><a href="../jsp/userentry.html">회원가입</a></li>
+               </c:if>
                <li><a href="../jsp/qnacenter.html">고객센터</a></li>
                <c:if test="${sessionScope.loginUser == null }">
                  <li><a href="../login/login.html" onClick="fuck()" ><i class="fas fa-user"></i></a></li>
@@ -63,6 +59,9 @@ function fuck(){
                </c:if>
                <c:if test="${sessionScope.grade =='M' }">               
                <li><a href="../jsp/storedetail.html"><i class="fas fa-clipboard-list"></i></a></li>
+               </c:if>
+               <c:if test="${sessionScope.grade =='V' }">
+               <li><a href="../manager/managerdetail.html"><i class="fas fa-cat"></i></a></li>
                </c:if>
             </ul>
          </nav>
@@ -82,8 +81,8 @@ function fuck(){
 			<h2>내 정보관리</h2>
         	<a class="active" href="../jsp/mypage.html" id = "test">개인정보 변경</a>
          	<a href="../jsp/password.html"id= "test">비밀번호 변경</a>
-			<a href="../main/ranking.html" id= "test">결제정보 확인</a>
-      	   	<a href="../jsp/yoya.html" id = "test" onclick="test()">예약정보 확인</a>
+			<a href="../jsp/list.html" id= "test">결제정보 확인</a>
+      	   	<a href="../jsp/list2.html" id = "test" onclick="test()">예약정보 확인</a>
 		</div>
 		<div class = "mypage-content">
 			<c:choose>

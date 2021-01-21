@@ -113,38 +113,29 @@ public class StoreController {
       }else {
          mav.addObject("BODY", "store_management.jsp");
       }
-            
-      
-      
       return mav;
    }
    
    @RequestMapping(value = "/jsp/store_Manage.html", method = RequestMethod.GET)
    public ModelAndView storeDetail(Store store, HttpSession session) {
       ModelAndView mav = new ModelAndView("jsp/template");
-      Integer store_no = (Integer) session.getAttribute("store_no");
+      Integer user_no = (Integer) session.getAttribute("user_no");
+      int store_no = storeDao.getStoreNo(user_no);
       store = storeDao.getStore(store_no);
-      System.out.println(store_no + "test");
       mav.addObject("STORE", store);
-
       mav.addObject("BANNER", "banner_store_detail.jsp");
       mav.addObject("BODY", "store_management.jsp");
-
       return mav;
    }
 
    @RequestMapping(value = "/store/addStore.html", method = RequestMethod.POST)
    public ModelAndView AddStore(Store store, ImageFile imagefile, HttpSession session,
          MultipartHttpServletRequest mtfRequest) {
-	   System.out.println("테스1");
       ModelAndView mav = new ModelAndView("jsp/template");
-      System.out.println("테스2");
     
       /* MultipartFile multiFile = store.getImage(); */
       List<MultipartFile> multiFile = mtfRequest.getFiles("image");
-      System.out.println("테스3");
       List<MultipartFile> multiFile2 = mtfRequest.getFiles("thumbnail");
-      System.out.println("테스4");
       String src = mtfRequest.getParameter("src");
       System.out.println("src value : " + src);
       String path = "C:\\Users\\Uk\\Desktop\\UdongProject\\uploadImage\\";

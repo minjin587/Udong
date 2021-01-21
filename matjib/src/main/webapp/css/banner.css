@@ -27,11 +27,11 @@ body {
   border-bottom: 1px solid #dbdbdb;
 }
 .banner_list h1{
-	font: normal bold 50px/54px "Song Myung", serif;
+   font: normal bold 50px/54px "Song Myung", serif;
 }
 .banner_list h2{
-	font: normal bold 30px/54px "Song Myung", serif;
-	color:#c0c0c0;
+   font: normal bold 30px/54px "Song Myung", serif;
+   color:#c0c0c0;
 }
 /* HEADER*/
 header {
@@ -80,6 +80,5 @@ nav ul li a {
   width: 20%;
   padding: 5px;
 }
-
 
 /* BANNNER-START*/

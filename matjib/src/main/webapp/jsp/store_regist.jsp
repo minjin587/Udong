@@ -140,12 +140,50 @@
       console.log("fileUploadAction2");
       $("#thumbnail").trigger('click');
    }
+   function test(){
+		if(form.store_bn.value == ""){
+			alert("사업자번호를 입력하세요");
+			form.store_bn.focus(); return false;
+		}
+		if(form.store_name.value == ""){
+			alert("가게이름을 입력하세요");
+			form.store_name.focus(); return false;
+		}
+		if(form.store_ceo.value == ""){
+			alert("대표자 이름을 입력하세요");
+			form.store_ceo.focus(); return false;
+		}
+		if(form.store_tel.value == ""){
+			alert("가게전화번호를 입력하세요");
+			form.store_tel.focus(); return false;
+		}
+		if(form.store_addr.selectedIndex < 1){
+			alert("주소를 입력하세요");
+			form.store_addr.focus(); return false;
+		}
+		if(form.store_category.selectedIndex < 1){
+			alert("매장정보를 입력하세요");
+			form.store_category.focus(); return false;
+		}
+		if(form.store_context.value == ""){
+			alert("매장 상세정보를 입력하세요");
+			form.store_context.focus(); return false;
+		}
+		if(form.thumbnail.value == "") {
+			alert("대표 이미지를 넣어주세요")
+			return false;
+		}
+		if(form.image.value == "") {
+			alert("가게이미지를 넣어주세요")
+			return false;
+		}
+   }
 </script>
 </head>
 <body>
    <div class="store_container">
       <form action="../store/addStore.html" method="post"
-         enctype="multipart/form-data" id="fileupload" name="form">
+         enctype="multipart/form-data" id="fileupload" name="form" onsubmit="return test(this)">
 <!-- 업체등록이 완료된 경우에는 첫페이지가 관리페이지로 가야함 -->
          <div class="sidebar">
             <a class="active" href="#home">업체 등록</a>
@@ -198,44 +236,44 @@
             </div>
 
 
-            <div class="row">
+             <div class="row">
                <div class="col-25">
                   <label for="store_addr">주소 : </label>
                </div>
                <div class="col-75">
                   <select id="store_addr" name="store_addr">
                      <option value="select">---- 선택하세요 ----</option>
-                     <option value="sinchon">신촌</option>
-                     <option value="yongsan">용산</option>
-                     <option value="jongro">종로</option>
-                     <option value="ansan">안산</option>
-                     <option value="anyang">안양</option>
-                     <option value="jamsil">잠실</option>
-                     <option value="gangnam">강남</option>
-                     <option value="hongdae">홍대</option>
+                     <option value="신촌">신촌</option>
+                     <option value="용산">용산</option>
+                     <option value="종로">종로</option>
+                     <option value="안산">안산</option>
+                     <option value="안양">안양</option>
+                     <option value="잠실">잠실</option>
+                     <option value="강남">강남</option>
+                     <option value="홍대">홍대</option>
                   </select>
                </div>
             </div>
 
-            <div class="row">
+			<div class="row">
                <div class="col-25">
                   <label for="store_category">업종분류 선택 : </label>
                </div>
                <div class="col-75">
                   <select id="store_category" name="store_category">
                      <option value="select">---- 선택하세요 ----</option>
-                     <option value="korean">한식</option>
-                     <option value="china">중식</option>
-                     <option value="japan">일식</option>
-                     <option value="chicken">치킨</option>
-                     <option value="pizaa">피자</option>
-                     <option value="snackbar">분식</option>
-                     <option value="midnight">야식</option>
-                     <option value="desset">디저트/카페</option>
-                     <option value="otc">기타</option>
+                     <option value="한식">한식</option>
+                     <option value="중식">중식</option>
+                     <option value="일식">일식</option>
+                     <option value="치킨피자">치킨/피자</option>                     
+                     <option value="분식야식">분식/야식</option>                     
+                     <option value="카페">디저트/카페</option>                     
                   </select>
                </div>
             </div>
+
+
+
 
             <div class="row">
                <div class="col-25">
@@ -292,9 +330,8 @@
 
                </div>
             </div>
-            
-
             <div class="store_bottom">
+               <input type ="hidden" value = "0" name = "admin_star">
                <input type="submit" value="등록하기 ">
             </div>
          </div>

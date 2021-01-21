@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import model.User;
 
 public interface LoginDao {
@@ -26,4 +28,9 @@ public interface LoginDao {
 	Integer getUser_no(String user_id);
 
 	Integer getStore_no(Integer user_no);
+	
+	List<User> getPullUser();
+	String getGender(Integer user_no);
+	String getBirth(Integer user_no);
+	String getUserID(String user_id);
 }

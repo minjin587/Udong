@@ -78,11 +78,15 @@ body {
   height:200px;
   margin:20px;
 }
-.side img {
+.side li img {
 	width:200px;
 	/* height:200px; */
 	margin-left:250px;	
 	
+}
+.row .side img{
+	width:200px;
+	height:100%;
 }
 .review ul li {  
   width: 100%;

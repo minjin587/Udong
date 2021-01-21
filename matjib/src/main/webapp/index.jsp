@@ -11,7 +11,7 @@
 		<title>Welcome</title>
 	</head> 
 	<body>
-		<c:url value="/jsp/template.html" var="messageUrl" />
+		<c:url value="/main/template.html" var="messageUrl" />
 		<a href="${messageUrl}">Click to enter</a>
 	</body>
 </html>

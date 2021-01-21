@@ -21,11 +21,11 @@
                 </a>             
             </li>
             <li>
-                <a href="#"><img src="../img/Category_main.jpg" alt="image2"/>
+                <a href="../main/category.html"><img src="../img/Category_main.jpg" alt="image2"/>
                 </a>                
             </li>
             <li>  
-                <a href="#"><img src="../img/Recommand_main.jpg" alt="image3"/>
+                <a href="../main/store_list.html"><img src="../img/Recommand_main.jpg" alt="image3"/>
                 </a>               
             </li>  
               

@@ -1,6 +1,8 @@
 package dao.impl;
 
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -58,5 +60,20 @@ public class LoginDaoImpl implements LoginDao {
 	public Integer getStore_no(Integer user_no) {
 		return session.selectOne("mapper.Storemapper.getStore_no",user_no);
 	}
-	
+
+	public List<User> getPullUser() {
+		return session.selectList("mapper.Usermapper.getPullUser");
+	}
+	   public String getGender(Integer user_no) {
+		      return session.selectOne("mapper.Usermapper.getGender", user_no);
+		   }
+
+		   public String getBirth(Integer user_no) {
+		      return session.selectOne("mapper.Usermapper.getBirth", user_no);
+		   }
+
+		public String getUserID(String user_id) {
+			return session.selectOne("mapper.Usermapper.getUserID",user_id);
+		}
+
 }

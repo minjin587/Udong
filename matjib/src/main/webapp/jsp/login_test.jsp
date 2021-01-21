@@ -24,7 +24,7 @@
     </div>
 
     <div class="qcontainer">
-      <label for="uname"><b>Username</b></label>
+      <label for="uname"><b>User_name</b></label>
       <input type="text" placeholder="Enter Username" name="user_id" required>
 
       <label for="psw"><b>Password</b></label>

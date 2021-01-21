@@ -22,10 +22,38 @@ public class MainController {
 	@Autowired
 	private StoreDao storeDao;
 	
+	   @RequestMapping(value = "/main/category.html", method = RequestMethod.GET)
+	   public ModelAndView category() {
+	      ModelAndView mav = new ModelAndView("jsp/template");
+	      mav.addObject("BANNER", "banner_main_category.jsp");
+	      mav.addObject("BODY", "main_category.jsp");
+	      return mav;
+	   }
+	
+	
+	@RequestMapping(value = "/main/store_list.html")
+	public ModelAndView Store_list() {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> List = storeDao.getAdminList();
+		mav.addObject("STORE",List);
+		mav.addObject("BANNER","banner_manager_admin.jsp");
+		mav.addObject("BODY","manager_list.jsp");      
+	    return mav;
+	}
+	//관리자
+	@RequestMapping(value="/manager/managerdetail.html",
+	         method=RequestMethod.GET)
+	   public ModelAndView ManagerDetail() {
+	      ModelAndView mav = new ModelAndView("jsp/template");
+	      List<User> liset2 = loginDao.getPullUser();
+	      mav.addObject("LIST", liset2);
+	      mav.addObject("BANNER","banner_manager_detail.jsp");
+	      mav.addObject("BODY","manager_user.jsp");      
+	      return mav;
+	   }
 	@RequestMapping(value = "/main/total.html", method = RequestMethod.GET)
 	public ModelAndView total() {
 		ModelAndView mav = new ModelAndView("jsp/template");
-
 		List<Store> StoreList = storeDao.findStore();
 		mav.addObject("storeList", StoreList);
 		mav.addObject("BANNER", "banner_login.jsp");
@@ -42,7 +70,6 @@ public class MainController {
 		mav.addObject("BODY","login_test.jsp");
 		return mav;
 	}
-	
 	//업체등록
 	@RequestMapping(value="/jsp/storedetail.html",
 	         method=RequestMethod.GET)

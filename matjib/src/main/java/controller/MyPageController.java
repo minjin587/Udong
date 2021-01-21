@@ -16,6 +16,19 @@ public class MyPageController {
 	@Autowired
 	private LoginDao logindao;
 	
+	@RequestMapping(value = "jsp/list2.html")
+	public ModelAndView list2() {
+		ModelAndView mav = new ModelAndView("jsp/mypage");
+		mav.addObject("BODY","list2.jsp");
+		return mav;
+	}
+	@RequestMapping(value = "jsp/list.html")
+	public ModelAndView list() {
+		ModelAndView mav = new ModelAndView("jsp/mypage");
+		mav.addObject("BODY","list.jsp");
+		return mav;
+	}
+	
 	@RequestMapping(value = "/jsp/yoya.html")
 	public ModelAndView yayo() {
 		ModelAndView mav = new ModelAndView("jsp/mypage");

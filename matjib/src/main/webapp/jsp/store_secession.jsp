@@ -14,7 +14,7 @@
 		<form action="/action_page.php">
 <!-- 업체등록이 완료된 경우에는 첫페이지가 관리페이지로 가야함 -->
 			<div class="sidebar">
-				<a href="#home">업체 등록</a>
+				<a href="../jsp/storedetail.html">업체 등록</a>
 				<a href="../jsp/store_Manage.html">업체 관리</a> 
 				<a class="active" href="../jsp/store_secession.html">업체 철회</a> 
 				<a href="#">기타 항목</a>

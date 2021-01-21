@@ -7,7 +7,8 @@
 		<mapper resource="mapper/userMapper.xml"/>
 		<mapper resource="mapper/storeMapper.xml"/>
 		<mapper resource="mapper/fileMapper.xml"/>
-		
+		<mapper resource="mapper/reviewMapper.xml"/>
+		<mapper resource="mapper/rankingMapper.xml"/>
 	</mappers>
 
 </configuration>
