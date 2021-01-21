@@ -150,8 +150,7 @@
          <div class="sidebar">
             <a class="active" href="#home">업체 등록</a>
             <a href="../jsp/store_Manage.html">업체 관리</a> 
-            <a href="../jsp/store_secession.html">업체 철회</a> 
-            <a href="#">기타 항목</a>
+            <a href="../jsp/store_secession.html">업체 철회</a>            
          </div>
 
 
@@ -227,12 +226,9 @@
                      <option value="한식">한식</option>
                      <option value="중식">중식</option>
                      <option value="일식">일식</option>
-                     <option value="치킨">치킨</option>
-                     <option value="피자">피자</option>
-                     <option value="분식">분식</option>
-                     <option value="야식">야식</option>
-                     <option value="카페">디저트/카페</option>
-                     <option value="기타">기타</option>
+                     <option value="치킨피자">치킨/피자</option>                     
+                     <option value="분식야식">분식/야식</option>                     
+                     <option value="카페">디저트/카페</option>                     
                   </select>
                </div>
             </div>
@@ -292,12 +288,13 @@
 
                </div>
             </div>
-            
+            <input type ="hidden" value = "0" name = "admin_star">
 
             <div class="store_bottom">
                <input type="submit" value="등록하기 ">
             </div>
          </div>
+         
       </form>
 
       <!--    <form id="fileForm" method="post" enctype="multipart/form-data">

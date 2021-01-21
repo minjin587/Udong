@@ -22,32 +22,32 @@
 		</p>
 	<ul class="ranking_list">
            <li>  
-                <a href="../ranking/lady.html">
+                <a href="../ranking/raking_female.html">
                 <img src="../img/Ranking_Lady.jpg" alt="image3"/>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../ranking/raking_male.html">
                 <img src="../img/Ranking_Date.jpg" alt="image explane"/>
                 </a>             
             </li>
             <li>
-                <a href="#">
+                <a href="../ranking/raking_uncle.html">
                 <img src="../img/Ranking_Uncle.jpg" alt="image2"/>
                 </a>                
             </li>
             <li>  
-                <a href="#">
+                <a href="../ranking/ranking_2030.html">
                 <img src="../img/Ranking_2030.jpg" alt="image3"/>
                 </a>               
             </li>  
              <li>  
-                <a href="#">
+                <a href="../ranking/review_star.html">
                 <img src="../img/Ranking_solo.jpg" alt="image3"/>
                 </a>               
             </li>  
               <li>  
-                <a href="#">
+                <a href="../ranking/review_ranking.html">
                 <img src="../img/Ranking_Instar.jpg" alt="image3"/>
                 </a>               
             </li>  

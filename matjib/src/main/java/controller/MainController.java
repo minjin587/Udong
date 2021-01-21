@@ -2,6 +2,8 @@ package controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,9 +22,36 @@ public class MainController {
 	@Autowired
 	private StoreDao storeDao;
 
+	   @RequestMapping(value = "/main/store_list.html")
+	   public ModelAndView Store_list() {
+	      ModelAndView mav = new ModelAndView("jsp/template");
+	      List<Store> List = storeDao.getAdminList();
+	      mav.addObject("STORE",List);
+	      mav.addObject("BANNER","banner_manager_admin.jsp");
+	      mav.addObject("BODY","manager_list.jsp");      
+	       return mav;
+	   }
 	
+	@RequestMapping(value="/manager/managerdetail.html",
+            method=RequestMethod.GET)
+      public ModelAndView ManagerDetail() {
+         ModelAndView mav = new ModelAndView("jsp/template");
+         List<User> liset2 = loginDao.getPullUser();
+         mav.addObject("LIST", liset2);
+         mav.addObject("BANNER","banner_manager_detail.jsp");
+         mav.addObject("BODY","manager_user.jsp");      
+         return mav;
+      }
 	
-	
+	// mav.add envet_detail로변경해야함
+	@RequestMapping(value = "/main/event1.html", method = RequestMethod.GET)
+	public ModelAndView event1() {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		mav.addObject("BANNER", "banner_event.jsp");
+		mav.addObject("BODY", "event_regist.jsp");
+		return mav;
+	}
+
 	@RequestMapping(value = "/main/category.html", method = RequestMethod.GET)
 	public ModelAndView category() {
 		ModelAndView mav = new ModelAndView("jsp/template");
@@ -38,17 +67,35 @@ public class MainController {
 
 		List<Store> StoreList = storeDao.findStore();
 		mav.addObject("storeList", StoreList);
-		mav.addObject("BANNER", "banner_login.jsp");
+		mav.addObject("BANNER", "banner_main_total.jsp");
 		mav.addObject("BODY", "main_total.jsp");
+		return mav;
+	}
+	//마이페이지
+	@RequestMapping(value = "/jsp/mypage.html")
+	public ModelAndView Mypage(User user, HttpSession session) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		mav.addObject("BANNER","banner_mypage.jsp");
+		mav.addObject("BODY","mypage.jsp");
 		return mav;
 	}
 
 	@RequestMapping(value = "/jsp/storedetail.html", method = RequestMethod.GET)
-	public ModelAndView storeDetail() {
+	public ModelAndView storeDetail(HttpSession session, Store store) {
 		ModelAndView mav = new ModelAndView("jsp/template");
 		mav.addObject("BANNER", "banner_store_detail.jsp");
-		mav.addObject("BODY", "store_regist.jsp");
-		return mav;
+		Integer user_no = (Integer) session.getAttribute("user_no");
+		Integer store_no = storeDao.getStoreNo(user_no);
+
+		if (store_no != null) {
+			store = storeDao.getStore(store_no);
+			mav.addObject("STORE", store);
+			mav.addObject("BODY", "store_management.jsp");
+			return mav;
+		} else {
+			mav.addObject("BODY", "store_regist.jsp");
+			return mav;
+		}
 	}
 
 	// 로그인 페이지 매핑//

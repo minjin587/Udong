@@ -19,15 +19,12 @@
 		delete from photo_table 
 		where store_no=#{store_no}
 	</delete>
-	
-	
+		
 	<select id="getMaxImageNo" resultType="Integer">
       select max(photo_no) from photo_table
     </select>
 	
-	<select id="" resultType="Integer" parameterType="String">
-		select * from photo_table where store_no = #{store_no}
-	</select>
-	
-	
+	<delete id="deletePhoto" parameterType="Integer">
+   delete from photo_table where store_no=#{store_no}
+   </delete>
 </mapper>

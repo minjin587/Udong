@@ -18,7 +18,7 @@
             <li class="slide1 slide">
                 <!-- <h2 class="fancy-box color main_title">WrojectTitle</h2> --> 
                 <!-- <div class="slide_contents"> -->                    
-                    <a href="#" class="btn">바로가기</a>
+                    <a href="../main/event1.html" class="btn">바로가기</a>
                 <!-- </div> -->
             </li>
             <li class="slide2 slide">

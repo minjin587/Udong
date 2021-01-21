@@ -29,6 +29,7 @@
     <div>
     <h1><a href="../total/detail.html?store_no=${cnt.store_no }">${cnt.store_name }</a></h1>
     <h3>${cnt.store_addr }</h3>
+    <h5>${cnt.store_category }</h5>
     </div>
     
     <div>      

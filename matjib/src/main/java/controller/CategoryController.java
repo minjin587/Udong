@@ -48,7 +48,55 @@ public class CategoryController {
 		mav.addObject("BODY", "category_korean_detail.jsp");
 		return mav;
 	}
-
+	
+	@RequestMapping(value = "/category/japanese.html", method = RequestMethod.GET)
+	public ModelAndView japanese(Store store) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> storeList = storeDao.findJapanese();
+		mav.addObject("koreanList", storeList);
+		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BODY", "category_korean.jsp");
+		return mav;
+	}
+	@RequestMapping(value = "/category/chinese.html", method = RequestMethod.GET)
+	public ModelAndView chinese(Store store) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> storeList = storeDao.findChinese();
+		mav.addObject("koreanList", storeList);
+		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BODY", "category_korean.jsp");
+		return mav;
+	}
+	@RequestMapping(value = "/category/pizaaChicken.html", method = RequestMethod.GET)
+	public ModelAndView pizaaChicken(Store store) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> storeList = storeDao.findPizzaChicken();
+		mav.addObject("koreanList", storeList);
+		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BODY", "category_korean.jsp");
+		return mav;
+	}
+	@RequestMapping(value = "/category/cafe.html", method = RequestMethod.GET)
+	public ModelAndView cafe(Store store) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> storeList = storeDao.findCafe();
+		mav.addObject("koreanList", storeList);
+		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BODY", "category_korean.jsp");
+		return mav;
+	}
+	//분식 야식
+	@RequestMapping(value = "/category/snack.html", method = RequestMethod.GET)
+	public ModelAndView snack(Store store) {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		List<Store> storeList = storeDao.findSnack();
+		mav.addObject("koreanList", storeList);
+		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BODY", "category_korean.jsp");
+		return mav;
+	}
+	
+	
 	@RequestMapping(value = "/category/korean.html", method = RequestMethod.GET)
 	public ModelAndView korean(Store store) {
 		ModelAndView mav = new ModelAndView("jsp/template");

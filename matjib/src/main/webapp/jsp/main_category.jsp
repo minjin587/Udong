@@ -27,27 +27,27 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../category/japanese.html">
                 <img src="../img/Japanese.jpg" alt="image explane"/>
                 </a>             
             </li>
             <li>
-                <a href="#">
+                <a href="../category/chinese.html">
                 <img src="../img/Chinese.jpg" alt="image2"/>
                 </a>                
             </li>
             <li>  
-                <a href="#">
+                <a href="../category/pizaaChicken.html">
                 <img src="../img/pizzachicken.jpg" alt="image3"/>
                 </a>               
             </li>  
              <li>  
-                <a href="#">
+                <a href="../category/cafe.html">
                 <img src="../img/cafe.jpg" alt="image3"/>
                 </a>               
             </li>  
               <li>  
-                <a href="#">
+                <a href="../category/snack.html">
                 <img src="../img/snack.jpg" alt="image3"/>
                 </a>               
             </li>  

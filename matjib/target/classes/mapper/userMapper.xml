@@ -12,12 +12,14 @@
 	<select id="getNicknameCount" parameterType="String"
 		resultType="Integer">
 		select count(*) as cnt from user_table
-		where nickname = #{nickname}
+		where nickname =
+		#{nickname}
 	</select>
 	<select id="getIdCount" parameterType="String"
 		resultType="Integer">
 		select count(*) as cnt from user_table
-		where user_id = #{user_id}
+		where user_id =
+		#{user_id}
 	</select>
 	<select id="getPassword" resultType="String"
 		parameterType="String">
@@ -40,4 +42,32 @@
 		resultType="model.User">
 		select * from user_table where user_id=#{user_id}
 	</select>
+	<select id="getGender" parameterType="Integer"
+		resultType="String">
+		select gender from user_table where user_no=#{user_no}
+	</select>
+	<select id="getBirth" parameterType="Integer"
+		resultType="String">
+		select birth from user_table where user_no=#{user_no}
+	</select>
+	<select id="getStore_count" resultType="Integer">
+      select count(*) from
+      store_table where user_no=#{user_no}
+   </select>
+   <select id="getUser_id" resultType="Integer"
+      parameterType="String">
+      select count(*) from user_table where user_id=#{user_id}
+   </select>
+      <select id="getNickName" parameterType = "String" resultType = "String">
+      select nickname from user_table where nickname = #{nickname}
+   </select>
+   <select id="getPhone" parameterType = "String" resultType = "String">
+      select phone from user_table where phone = #{phone}
+   </select>
+   <update id="setMypage" parameterType = "model.User">
+      update user_table set nickname = #{nickname}, phone = #{phone} where user_id = #{user_id}
+   </update>
+     <select id="getPullUser" resultType = "model.User">
+      select * from user_table
+   </select>
 </mapper>

@@ -41,11 +41,19 @@
                <li><a href="../logout/template.html" class="login">로그아웃</a></li>
                </c:if>
                <li><a href="../jsp/userentry.html">회원가입</a></li>
-               <li><a href="../jsp/qnacenter.html">고객센터</a></li>
-               <li><a href="#"> <i class="fas fa-user"></i></a></li>
+              <!--  <li><a href="../jsp/qnacenter.html">고객센터</a></li> -->
+               
+               <c:if test="${loginUser != null }">
+               <li><a href="../jsp/mypage.html" target="_self"><i class="fas fa-user"></i></a></li>
+               </c:if>               
+               
                <c:if test="${sessionScope.grade =='M' }">               
                <li><a href="../jsp/storedetail.html">
                <i class="fas fa-clipboard-list"></i></a></li>
+               
+               <c:if test="${grade =='M' }">
+               <li><a href="../manager/managerdetail.html"><i class="fas fa-cat"></i></a></li>
+               </c:if>
               </c:if>
                
                

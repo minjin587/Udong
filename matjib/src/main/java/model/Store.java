@@ -18,8 +18,36 @@ public class Store {
 	private Integer user_no;
 	private String main_image;	
 	private MultipartFile thumbnail;
+	private Integer admin_star;
+	private Integer review_count;
+	private Integer star_total;
+	private Integer star_avg;
 	
 	
+	public Integer getAdmin_star() {
+		return admin_star;
+	}
+	public void setAdmin_star(Integer admin_star) {
+		this.admin_star = admin_star;
+	}
+	public Integer getReview_count() {
+		return review_count;
+	}
+	public void setReview_count(Integer review_count) {
+		this.review_count = review_count;
+	}
+	public Integer getStar_total() {
+		return star_total;
+	}
+	public void setStar_total(Integer star_total) {
+		this.star_total = star_total;
+	}
+	public Integer getStar_avg() {
+		return star_avg;
+	}
+	public void setStar_avg(Integer star_avg) {
+		this.star_avg = star_avg;
+	}
 	public Integer getStore_no() {
 		return store_no;
 	}

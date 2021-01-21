@@ -23,23 +23,24 @@ public class LoginController {
    
    @RequestMapping(value = "/login/main.html", method = RequestMethod.POST)
    public ModelAndView login(@Valid User user, BindingResult br, HttpSession session) {
-      ModelAndView mav = new ModelAndView("jsp/template");
-      if (br.hasErrors()) {
-         mav.getModel().putAll(br.getModel());
-      }
+      
+      ModelAndView mav = new ModelAndView();
+      Integer id_count = loginDao.getUser_id(user.getUser_id());
       String password = loginDao.getPassword(user.getUser_id());
-      String grade = loginDao.getGrade(user.getUser_id());
-      Integer user_no=loginDao.getUser_no(user.getUser_id());
-      Integer store_no=loginDao.getStore_no(user_no);
-      System.out.println(store_no);
-      if (password == null || !user.getPassword().equals(password)) {
-         JOptionPane.showMessageDialog(null, "아이디와 암호를 확인하세요.");
+   
+      if (id_count==0||password == null || !user.getPassword().equals(password)) {
+         mav = new ModelAndView("jsp/loginFail");
       } else {
+         String grade = loginDao.getGrade(user.getUser_id());
+         Integer user_no=loginDao.getUser_no(user.getUser_id());
+         Integer store_no=loginDao.getStore_no(user_no);
+         Integer store_count=loginDao.getStore_count(user_no);
+         mav = new ModelAndView("jsp/template");
          session.setAttribute("loginUser", user.getUser_id());
          session.setAttribute("grade",grade);
          session.setAttribute("user_no",user_no);
          session.setAttribute("store_no",store_no);
-
+         session.setAttribute("store_count",store_count);
       }
       return mav;
    }
