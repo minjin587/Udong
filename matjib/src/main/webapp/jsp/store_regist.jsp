@@ -140,12 +140,60 @@
       console.log("fileUploadAction2");
       $("#thumbnail").trigger('click');
    }
+   function validate(form) {
+	   if (form.store_bn.value == "") {
+	      form.store_bn.focus();
+	      alert("사업자명을 입력해주세요");
+	      return false;
+	   }
+	   if (form.store_name.value == "") {
+	      alert("가게이름을 입력해주세요.");
+	      form.store_name.focus();
+	      return false;
+	   }
+	   if (form.store_ceo.value == "") {
+	      alert("대표자이름을 입력해주세요.");
+	      form.store_ceo.focus();
+	      return false;
+	   }
+
+	   if (form.store_tel.value == "") {
+	      alert("전화번호를 입력해주세요.");
+	      form.store_tel.focus();
+	      return false;
+	   }
+	   if (form.store_addr.value == "select") {
+	      alert("주소를 입력해주세요.");
+	      form.store_addr.focus();
+	      return false;
+	   }
+	   if (form.store_category.value == "select") {
+	      alert("업체분류를 입력해주세요.");
+	      form.store_category.focus();
+	      return false;
+	   }
+	   if (form.store_context.value == "") {
+	      alert("업체상세설명을 입력해주세요.");
+	      form.store_context.focus();
+	      return false;
+	   }
+	   if (form.thumbnail.value == "") {
+	      alert("대표이미지를 넣어주세요.");
+	      return false;
+	   }
+	   if (form.image.value == "") {
+	      alert("가게이미지를 넣어주세요.");
+	      return false;
+	   }
+	   }
+
 </script>
 </head>
 <body>
    <div class="store_container">
       <form action="../store/addStore.html" method="post"
-         enctype="multipart/form-data" id="fileupload" name="form">
+         enctype="multipart/form-data" id="fileupload" name="form"
+         onSubmit="return validate(this)">
 <!-- 업체등록이 완료된 경우에는 첫페이지가 관리페이지로 가야함 -->
          <div class="sidebar">
             <a class="active" href="#home">업체 등록</a>

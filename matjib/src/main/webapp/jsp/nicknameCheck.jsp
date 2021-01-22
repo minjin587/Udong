@@ -16,10 +16,10 @@ function nicknameOk(){
 </script>
 </head>
 <body>
-<h2 align="center">ID중복 확인</h2>
+<h2 align="center">닉네임 중복 확인</h2>
 <form action="../idcheck/nicknamecheck.html" method="get"
 	name="form">
-아이디 : <input type="text" name="nickname" value="${nickname }"/>
+닉네임 : <input type="text" name="nickname" value="${nickname }"/>
 <input type="submit" value="중복 검사"/><br/>
 <c:if test="${DUP == 'YES' }">
 	<script type="text/javascript">

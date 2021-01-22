@@ -32,6 +32,7 @@ public class LoginController {
          mav = new ModelAndView("jsp/loginFail");
       } else {
          String grade = loginDao.getGrade(user.getUser_id());
+         System.out.println("grade"+grade);
          Integer user_no=loginDao.getUser_no(user.getUser_id());
          Integer store_no=loginDao.getStore_no(user_no);
          Integer store_count=loginDao.getStore_count(user_no);

@@ -50,11 +50,13 @@
                <c:if test="${sessionScope.grade =='M' }">               
                <li><a href="../jsp/storedetail.html">
                <i class="fas fa-clipboard-list"></i></a></li>
-               
-               <c:if test="${grade =='M' }">
-               <li><a href="../manager/managerdetail.html"><i class="fas fa-cat"></i></a></li>
                </c:if>
-              </c:if>
+               
+               <c:if test="${sessionScope.grade =='S' }">
+               <li><a href="../manager/managerstore.html">
+               <i class="fas fa-user-lock"></i></a></li>
+               </c:if>
+              
                
                
             </ul>

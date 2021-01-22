@@ -16,12 +16,12 @@
 	crossorigin="anonymous"></script>
 <script	src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-<title>Insert title here</title>
+<title>User_Entry</title>
 </head>
 <body>
 	<div class="banner_list container clearfix">
-		<h1>회원 가입</h1>
-		<h2>"우리동네 맛집의 회원이 되어 다양한 이벤트에 참여해보세요!"</h2>
+		<h1>관리자 페이지</h1>
+		<h2>관리자 전용 페이지 입니다.</h2>
 	</div>
 </body>
 </html>

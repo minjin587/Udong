@@ -63,6 +63,14 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+input[type=password], select, textarea {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 .sidebar {
   margin: 0;
   padding: 0;

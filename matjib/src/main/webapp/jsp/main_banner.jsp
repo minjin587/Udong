@@ -25,14 +25,14 @@
                 <!-- <h2 class="fancy-box color main_title">ProjectTitle</h2> --> 
                 <!-- <div class="slide_contents">    
                 </div> -->                
-                     <a href="#" class="btn">바로가기</a>
+                     <a href="../main/event1.html" class="btn">바로가기</a>
                 
             </li>  
             <li class="slide3 slide">
                 <!-- <h2 class="fancy-box color main_title">ProjectTitle</h2> --> 
                 <!-- <div class="slide_contents">
                 </div> -->                    
-                     <a href="#" class="btn">바로가기</a>
+                     <a href="../main/event1.html" class="btn">바로가기</a>
                 
             </li>              
         </ul>

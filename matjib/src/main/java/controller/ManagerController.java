@@ -18,21 +18,21 @@ public class ManagerController {
    @Autowired
    private StoreDao storeDao;
    
-   @RequestMapping(value="/manager/managerstore.html", method=RequestMethod.GET)
-    public ModelAndView StoreDeteil() {
-      ModelAndView mav = new ModelAndView("jsp/template");
-      List<Store> store = storeDao.getPullStore();
-      mav.addObject("STORE",store);
-      mav.addObject("BANNER","banner_manager_store.jsp");
-      mav.addObject("BODY","manager_store.jsp");
-      return mav;
-   }
+	@RequestMapping(value = "/manager/event.html", method = RequestMethod.GET)
+	public ModelAndView event1() {
+		ModelAndView mav = new ModelAndView("jsp/template");
+		mav.addObject("BANNER", "banner_event.jsp");
+		mav.addObject("BODY", "event_regist.jsp");
+		return mav;
+	}
+   
+  
    @RequestMapping(value = "/manager/storeview.html")
    public ModelAndView StoreView(Integer NO) {
       ModelAndView mav = new ModelAndView("jsp/template");
       Store store = storeDao.getStore(NO);
       mav.addObject("STORE",store);
-      mav.addObject("BANNER","banner_manager_store.jsp");
+      mav.addObject("BANNER","banner_admin.jsp");
       mav.addObject("BODY","manager_storeDetail.jsp");
       return mav;
    }

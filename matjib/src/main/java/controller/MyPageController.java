@@ -44,7 +44,8 @@ public class MyPageController {
    }
    @RequestMapping(value = "/jsp/password.html")
    public ModelAndView pass() {
-      ModelAndView mav = new ModelAndView("jsp/mypage");
+      ModelAndView mav = new ModelAndView("jsp/template");
+      mav.addObject("BANNER","banner_mypage.jsp");
       mav.addObject("BODY", "pass.jsp");
       
       
@@ -52,21 +53,21 @@ public class MyPageController {
    }
    @RequestMapping(value = "/jsp/pword.html")
    public ModelAndView password() {
-      ModelAndView mav = new ModelAndView("jsp/mypage");
-       
+      ModelAndView mav = new ModelAndView("jsp/template");       
       
       mav.addObject("BODY","paword.jsp");
       return mav;
    }
    @RequestMapping(value = "/jsp/mypagemain.html")
    public ModelAndView Mypageinfo(String user_id , User user, HttpSession session) {
-      ModelAndView mav = new ModelAndView("jsp/mypage");
+      ModelAndView mav = new ModelAndView("jsp/template");
       String originpwd = logindao.getPassword((String)session.getAttribute("loginUser")); 
       if(originpwd == null || !user.getPassword().equals(originpwd) ) {
          mav.addObject("BODY","nologin.jsp");
       } else {
          user = logindao.getUser(user_id);
          mav.addObject("USER",user);
+         mav.addObject("BANNER","banner_mypage.jsp");
          mav.addObject("BODY","pwd.jsp");
       }
       return mav;

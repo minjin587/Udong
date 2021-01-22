@@ -16,7 +16,7 @@ function idOk(){
 <body>
 <h2 align = "center">중복확인</h2>
 <form action = "../nickname/nickcheck.html" method = "get" name = "test">
-아이디: <input type= "text" id = "nickname" name = "nickname" value = "${nick }"/>
+닉네임 :<input type= "text" id = "nickname" name = "nickname" value = "${nick }"/>
 <input type = "submit" value = "중복 검사"/><br/>
 <c:if test="${nickname != 'OK' }">
 <!-- 	<script type="text/javascript"> -->
