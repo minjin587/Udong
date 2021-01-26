@@ -7,7 +7,7 @@ public class Store {
 	private String store_name;
 	private String store_bn;
 	private String store_ceo;
-	private Integer store_tel;
+	private String store_tel;
 	private String store_addr;
 	private String store_category;
 	private String store_context;
@@ -133,10 +133,10 @@ public class Store {
 	public void setStore_ceo(String store_ceo) {
 		this.store_ceo = store_ceo;
 	}
-	public Integer getStore_tel() {
+	public String getStore_tel() {
 		return store_tel;
 	}
-	public void setStore_tel(Integer store_tel) {
+	public void setStore_tel(String store_tel) {
 		this.store_tel = store_tel;
 	}
 	public String getStore_addr() {

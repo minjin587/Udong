@@ -19,14 +19,14 @@
   <div class="side">
   <ul>    
     <li>
-    <a href="#"><img src="#" alt="store_image"></a>
+    <a href="#"><img src="${pageContext.request.contextPath }/image/${list.main_image}" alt="store_image"></a>
     </li>
   </ul>    
   </div> 
  	
  <div class="main">
  	<div>
-    <h1><a href="#">${list.store_name }</a></h1>
+    <h1><a href="../category/korean_detail.html?store_no=${list.store_no }">${list.store_no } ${list.store_name }</a></h1>
     <h3>${list.store_addr } </h3>
     </div>
    

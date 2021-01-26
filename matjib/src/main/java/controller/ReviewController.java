@@ -51,6 +51,39 @@ public class ReviewController {
 		Integer store_no = review.getStore_no();
 		Store store = storeDao.getStore(store_no);
 		String gender = loginDao.getGender(user_no);
+		Integer star_plus=review.getReview_star();
+	    Integer star_total=storeDao.getStarTotal(store_no);
+	    Integer reviewCount=storeDao.getReviewCount(store_no);
+	    Integer new_avg;
+	      if (storeDao.getReviewCount(store_no) == 0) {
+	         review_maxNo = 1;
+	         store.setReview_count(review_maxNo);
+	         storeDao.updateReviewCount(store);
+	         
+	         store.setStar_avg(star_plus);
+	         store.setStar_total(star_plus);
+	         storeDao.updateStarAvg(store);
+	   
+	         
+	      } else {
+	         store.setReview_count(storeDao.getReviewCount(store_no) + 1);
+	         storeDao.updateReviewCount(store);
+	         new_avg=(star_plus+star_total)/(storeDao.getReviewCount(store_no));
+	         System.out.println("엘스");
+	         System.out.println("스타플러스"+star_plus);
+	         System.out.println("스타토탈"+star_total);
+	         System.out.println("스타평균"+new_avg);
+	         System.out.println("리뷰숫자"+reviewCount);
+	         store.setStar_total(star_plus+star_total);
+	         store.setStar_avg(new_avg);
+	      
+	      
+	         
+	         storeDao.updateStarAvg(store);
+
+	      }
+		
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH");
 		Date time = new Date();
 		String time1 = sdf.format(time);

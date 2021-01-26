@@ -28,7 +28,7 @@
             </li>
             <li>
                 <a href="../ranking/raking_male.html">
-                <img src="../img/Ranking_Date.jpg" alt="image explane"/>
+                <img src="../img/Ranking_Date.png" alt="image explane"/>
                 </a>             
             </li>
             <li>
@@ -43,12 +43,12 @@
             </li>  
              <li>  
                 <a href="../ranking/review_star.html">
-                <img src="../img/Ranking_solo.jpg" alt="image3"/>
+                <img src="../img/Ranking_solo.png" alt="image3"/>
                 </a>               
             </li>  
               <li>  
                 <a href="../ranking/review_ranking.html">
-                <img src="../img/Ranking_Instar.jpg" alt="image3"/>
+                <img src="../img/Ranking_Instar.png" alt="image3"/>
                 </a>               
             </li>  
                

@@ -44,7 +44,7 @@ public class CategoryController {
 		List<ImageFile> photo = storeDao.getPhoto(store_no);
 		mav.addObject("Store", store);
 		mav.addObject("Photo", photo);
-		mav.addObject("BANNER", "banner_main_category.jsp");
+		mav.addObject("BANNER", "banner_total_detail.jsp");
 		mav.addObject("BODY", "category_korean_detail.jsp");
 		return mav;
 	}
