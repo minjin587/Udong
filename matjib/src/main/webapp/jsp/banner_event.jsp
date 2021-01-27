@@ -21,7 +21,7 @@
 <body>
 	<div class="banner_list container clearfix">
 		<h1>우리동네 맛집 이벤트 페이지</h1>
-		<h2>"다양한 이벤트에 참가해보세요!!"</h2>
+		<h2>"다양한 이벤트에 참가해보세요!!"</h2>  
 	</div>
 </body>
 </html>
