@@ -1,6 +1,7 @@
 @charset "EUC-KR";
 @import url(resetCss.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Song+Myung&display=swap");
+/* @media (max-width: 600px) */
 /* 
 font-family: 'Roboto', sans-serif;
 font-family: 'Song Myung', serif;
@@ -8,8 +9,17 @@ font-family: 'Song Myung', serif;
 
 /* LAYOUT */
 .container {
-  width: 1130px;
-  margin: 0 auto;
+  width: 1348px;
+  margin: 0;    
+}
+.scontainer{
+	/* width:1348px; */
+	margin: 0 auto;	
+}
+.main_content {
+	padding:40px 0 108px;	
+	/* background: url(../img/background.jpg) no-repeat; */
+	background-color:#ececec;	
 }
 /* TYPOGRAPHY (세부내용)*/
 body {
@@ -22,45 +32,101 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   font-weight: 300;
+ 
 }
 .content_title {
   font: nomal 32px/1 "Roboto", sans-serif;
   letter-spacing: 0.025em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 54px;
+  margin-bottom: 30px;
+  
 }
-.content_sub_title {
+.content_title input[type="text"]{
+	display:inline-bolck;
+	width:300px;
+	height:40px;
+	padding:0 19px;
+	border:none;
+	font-style:italic; 
+	color:#000000;
+}
+/* .content_sub_title {
   font: nomal 23px/1 "Roboto", sans-serif;
-}
+} */
 a {
   font-style: italic;
   color: #f6604c;
-  text-decoration: none;
+  text-decoration: none;  
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.btn{
+	padding:0 32px;
+	line-height: 40px;
+	border:1px solid #f0ad64;
+	border-radius: 2px;
+	color:#f0ad64;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-transform:uppercase;
+	display:inline-block;
+	text-decoration:none;
+	font-style:normal;
+	background:none;
+	transition:0.4s;
+}
+.btn:hover {
+	background:#f0ad64;
+	color:#fff;
+}
+
+.login_btn{	
+	padding:10px 30px;
+	line-height: 40px;
+	border:1px solid #f0ad64;
+	border-radius: 2px;
+	color:#f0ad64;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-transform:uppercase;
+	display:inline-block;
+	text-decoration:none;
+	font-style:normal;
+	background:none;
+	transition:0.4s;
+	margin:50px 20px 0px 70px;
 }
 /* Header */
 header {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 101;
   left: 0;
   right: 0;
-  padding: 27px 0;
+  padding: 10px 0;
 }
 .logo {
-  float: left; 
-  font-size: 24px;
+  float: left;  
+  margin-left:50px;  
   color: white;
 }
 .logo a {
-  width: 54px;
-  height: 54px;
-  background: url(../img/logosample.jpg) no-repeat;
+  width: 250px;
+  height: 60px;
+  background: url(../img/logo_gray.jpg) no-repeat;
   text-indent: -9999em;
   display: block;
 }
+
 nav {
   float: right;
+  position:absolute;
+  right:50px;
+  
 }
 nav ul li {
   float: left;
@@ -72,8 +138,11 @@ nav ul li a {
   text-decoration: none;
   font: normal bold 14px/54px "Song Myung", serif;
 }
-/* CONTENT */
+
 /* BANNNER-START*/
+.banner {
+	position:relative;	
+}
 .banner_list .slide {
   width: 100%;
   height: 600px;
@@ -81,21 +150,176 @@ nav ul li a {
   background-position: center top;
   background-size: cover;
   text-align: center;
+  padding-top:550px;
+  box-sizing:border-box;
 }
+
 .banner_list .slide1 {
   background-image: url(../img/slide1.png);
 }
+
 .banner_list .slide2 {
   background-image: url(../img/slide-1-bg.jpg);
 }
 .banner_list .slide3 {
   background-image: url(../img/slide3.png);
 }
-/* MAIN-CONTENT */
 
-/* MAIN-CONTENT */
+.controls a {
+	font-size:55px;
+	color:rgba(255,255,255,0.5);
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:102;
+	transform:translateY(-50%);
+}
+.controls a.prev{
+	margin-left:-570px;	
+}
+.controls a.next{
+	margin-left:536px;
+}
+.pager{
+	font-size:30px;
+	position:absolute;
+	left:49%;
+	
+}
 /* BANNNER-END*/
+/* MAIN - CONTENT */
+.main_content p {
+	text-align:center;
+}
+.main_content .project_link {
+	margin-bottom:54px;
+}
+.project_list li{
+	/* float:left;  */
+	display:inline-block;	
+	width:45%;
+	margin-left:45px; 
+	margin-right:35px;
+	margin-bottom:50px;
+	padding:60px; 
+	/* border:1px solid #919191; */
+	box-sizing:border-box;
+		
+}
+.project_list li img{
+	width:100%; 
+	height:600px; /* auto */	
+}
 
+.ranking_list li{
+	display:inline-block;		
+	margin-left:110px; 
+	margin-right:110px;
+	margin-bottom:50px;
+	padding:3px; 
+	border:1px solid #919191;
+	box-sizing:border-box;
+}
+
+.ranking_list li img{
+	/* width:100%;  */
+	height:400px; /* auto */
+}
+/* .project_list li:nth-chile(2n){
+	margin-right:0;
+}
+.project_list li .hover_content{
+	position:absolute;
+	left:3px; 
+	right:3px;
+	top:3px;
+	bottom:3px;
+	background:rgba(0,0,0,0.5);  
+	padding-top:79px;
+	text-align:center;
+	opacith:0;
+	transition:0.4s;
+}
+.project_list li .hover_content h4{
+	margin-bottom:48px;
+	font-size:23px;
+	color:#f4af55;		
+}
+.project_list li .hover_content a{
+	font-size:14px;
+	color:#fff;		
+	text-transform:uppercase;
+	font-stlye:normal;
+}
+.project_list li:hover .hover_content {
+	opacity:1;
+} */
+/* MAIN-CONTENT */
+/* FOOTER*/
+footer{
+	text-align:center;
+}
+.footer_main{	
+	background:#333538;
+	padding:81px 0 71px;
+	margin-top:-27px;
+}
+footer .fancy-box{	
+	padding:0px 35px;
+}
+.fancy-box.orange{
+	background:rgba(244,175,85,.9);
+}
+footer .icon{
+	font-size:55px;
+	color:#fff;
+}
+.footer_main p{
+	
+	margin:0 auto 37px;
+	color:#fff;
+}
+
+.footer_main form input[type="email"]{
+	display:inline-bolck;
+	width:300px;
+	height:40px;
+	padding:0 19px;
+	border:none;
+	font-style:italic; 
+	color:#000000;
+}
+.footer_main form input[tpye="email"]::placeholder{
+	color:#ff0000;
+}
+
+footer .share {
+	margin:20px 0;
+}
+footer .share a{
+	background:rgba(244,175,85,.9);
+	font-size:14px;
+	color:#fff;
+	border-radius:5px;
+	width:24px;
+	height:20px;
+	display:inline-block;
+	transition:0.4s;
+}
+
+footer .share a:hover{
+	background:#ebebeb;
+	color:#f6604c;
+}
+footer .copy{
+	/* margin-bottom:50px; */	
+	border-top: 1px solid #6a6a6a;
+	padding: 90px 0 42px 0;
+	background-color:#333538;
+	color:white;
+	border-bottom: 1px solid #6a6a6a;
+	margin:20px;
+} 
 /* FOOTER*/
 
 /* ABOUT */

@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+   prefix="c" %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css"
+   href="${pageContext.request.contextPath}/css/banner.css">
+<title>UdongProject</title>
+<meta name="description" content="An HTML protfolio Theme built" />
+<meta name="keywords" content="portfolio, theme, bootstrap, grid" />
+<meta name="author" content="Alikerock" />
+<meta name="viewport" content="width=device-width" , initial-scale=1 "/>
+<script src="https://kit.fontawesome.com/90c06db892.js"
+   crossorigin="anonymous"></script>
+<script   src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<title>total_banner</title>
+</head>
+<body>
+
+<div class="total_photo">
+ <c:forEach var="photo" items="${Photo }">
+  <div class="seperate">
+    <img src="${pageContext.request.contextPath }/image/${photo.photo_org_name }"  style="width:100%">
+  </div>
+    </c:forEach>
+</div>
+
+</body>
+</html>

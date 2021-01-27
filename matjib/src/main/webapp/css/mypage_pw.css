@@ -1,0 +1,206 @@
+@charset "EUC-KR";
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* <!-- 파일 업로드 --> */
+
+	 .input_wrap input[type=file] {
+            display: none;
+        }
+
+        .my_button {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            background-color: #006BCC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .imgs_wrap {
+                    
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }        
+        
+        .imgs_wrap img {
+        	width:150px;
+        	height:150px;
+            max-width: 150px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .imgs_wrap2{
+        	margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .imgs_wrap2 img{
+ 	        width:150px;
+        	height:150px;
+            max-width: 150px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+        
+input[type=button], select, textarea {
+	padding:0 32px;
+	line-height: 40px;
+	border:1px solid #f0ad64;
+	border-radius: 2px;
+	color:#f0ad64;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-transform:uppercase;
+	display:inline-block;
+	text-decoration:none;
+	font-style:normal;
+	background:none;
+	transition:0.4s;
+}
+input[type=password], select, textarea {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;  
+  height: 100%;
+  overflow: auto;
+  float:left;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  /* text-decoration: none; */
+}
+
+.sidebar a {
+   /* float: left; */
+}
+
+.sidebar a.active {
+  background-color: #f0ad64;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  /* height: 1000px; */
+}
+div.secession_content{
+	margin-left :200px;
+	padding: 1px 16px;
+	height:100px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+  div.secession_content{margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.store_bottom{
+   text-align:center;
+}
+
+.store_bottom input[type=submit] {  
+  color: white;
+  
+  margin: 8px 0;
+  border:1px solid #f0ad64;
+  color:#f0ad64;
+  font-weight:bold;
+  cursor: pointer;
+  width: 40%;
+}
+
+.store_bottom input[type=submit]:hover {
+  opacity: 0.8;
+  background:#f0ad64;
+  color:#fff;
+}
+
+.store_container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  text-align:center;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  /* clear: both; */
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

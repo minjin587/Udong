@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Filemapper">
+	<!-- 사진 삽입 -->
+	<insert id="addPhoto" parameterType="model.ImageFile">
+		insert into photo_table(photo_no, store_no, photo_path, photo_org_name, photo_new_name)
+		values(#{photo_no},#{store_no},#{photo_path},#{photo_org_name},#{photo_new_name})
+	</insert>
+	
+	<update id="updateStore_Image" parameterType="Integer">
+		update photo_table set
+		photo_no=#{photo_no},photo_org_name=#{photo_org_name},
+		photo_new_name=#{photo_new_name},photo_path=#{photo_path}
+		where store_no =#{store_no}
+	</update>
+	
+	<delete id="deleteImage" parameterType="Integer">
+		delete from photo_table 
+		where store_no=#{store_no}
+	</delete>
+		
+	<select id="getMaxImageNo" resultType="Integer">
+      select max(photo_no) from photo_table
+    </select>
+	
+	<delete id="deletePhoto" parameterType="Integer">
+   delete from photo_table where store_no=#{store_no}
+   </delete>
+</mapper>

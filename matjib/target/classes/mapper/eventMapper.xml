@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Eventmapper">
+	<select id="getMaxImageNo" resultType="Integer">
+      select max(event_photo) from event_table
+    </select>
+
+
+<select id="getMaxEventNo" resultType="Integer">
+	select max(event_no) from event_table
+</select>
+<insert id="AddEvent" parameterType="model.Event">
+insert into event_table(event_no,event_title,event_context,event_photo)
+	values(#{event_no},#{event_title},#{event_context},#{event_photo})
+</insert>
+
+<select id="searchEV" resultType="model.Event">
+	select * from event_table
+</select>
+<update id="updateEvent" parameterType="model.Event">
+	update Event_table
+	set event_title=#{event_title},event_context=#{event_context},
+	event_photo=#{event_photo} where event_no =#{event_no}
+</update>
+<delete id="deleteEvent" parameterType="Integer">
+	delete from event_table
+	where event_no=#{event_no}
+</delete>
+
+</mapper>

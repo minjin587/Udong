@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.Storemapper">
+	<update id="updateStore_regist" parameterType="model.Store">
+		update store_table
+		set
+		store_ceo=#{store_ceo},store_tel=#{store_tel},store_addr=#{store_addr},
+		store_category=#{store_category},store_context=#{store_context},main_image=#{main_image}
+		where store_no = #{store_no}
+	</update>
+
+	<insert id="addStore" parameterType="model.Store">
+		insert into
+		store_table(user_no,store_no,store_name,store_ceo,store_tel,store_addr,
+		store_category,store_context,store_bn,order_count_male,order_count_female,
+		order_count_young,order_count_old, main_image,review_count,star_total,
+		star_avg,admin_star)
+		values(#{user_no},#{store_no},#{store_name},#{store_ceo},#{store_tel},
+		#{store_addr},#{store_category},#{store_context},#{store_bn},
+		#{order_count_male},#{order_count_female}
+		,#{order_count_young},#{order_count_old},#{main_image},#{review_count},#{star_total},
+		#{star_avg},#{admin_star})
+	</insert>
+
+	<select id="getMaxStoreNo" resultType="Integer">
+		select max(store_no) from store_table
+	</select>
+
+	<select id="getStore_no" resultType="Integer"
+		parameterType="String">
+		select store_no from store_table where user_no=#{user_no}
+	</select>
+
+	<select id="getStore" resultType="model.Store"
+		parameterType="Integer">
+		select * from store_table where store_no = #{store_no}
+	</select>
+
+	<select id="findStore" resultType="model.Store">
+		select * from store_table
+	</select>
+	
+	<select id="getStoreNo" parameterType="Integer" resultType="Integer">
+	select store_no from store_table where user_no = #{user_no}
+	</select>
+	
+	<select id="getPhoto" resultType="model.ImageFile" parameterType="Integer">
+   select * from photo_table where store_no =#{store_no}
+   </select>
+   <select id="findKorean" resultType="model.Store">
+   	select * from store_table where store_category='한식'
+   </select>
+   <select id="findJapanese" resultType="model.Store">
+   	select * from store_table where store_category='일식'
+   </select>
+   <select id="findChinese" resultType="model.Store">
+   	select * from store_table where store_category='중식'
+   </select>
+    <select id="findPizza" resultType="model.Store">
+   	select * from store_table where store_category ='치킨피자'
+   </select>
+    <select id="findSnack" resultType="model.Store">
+   	select * from store_table where store_category ='분식야식'
+   </select>
+   <select id="findCafe" resultType="model.Store">
+   	select * from store_table where store_category ='카페'
+   </select>
+   <update id="update_old_count" parameterType="model.Store">
+      update store_table set
+      order_count_old=#{order_count_old} where
+      store_no=#{store_no}
+   </update>
+   <update id="update_young_count" parameterType="model.Store">
+      update store_table set order_count_young=#{order_count_young} where
+      store_no=#{store_no}
+   </update>
+   <select id="get_old_count_male" resultType="Integer"
+      parameterType="Integer">
+      select order_count_old from store_table where
+      store_no=#{store_no}
+   </select>
+   <select id="get_young_count_male" resultType="Integer"
+      parameterType="Integer">
+      select order_count_young from store_table where
+      store_no=#{store_no}
+   </select>
+   <update id="update_male_count" parameterType="model.Store">
+      update store_table
+      set order_count_male=#{order_count_male} where
+      store_no=#{store_no}
+   </update>
+   <update id="update_female_count" parameterType="model.Store">
+      update
+      store_table set order_count_female=#{order_count_female} where
+      store_no=#{store_no}
+   </update>
+   <select id="get_order_count_male" parameterType="Integer"
+      resultType="Integer">
+      select order_count_male from store_table where
+      store_no=#{store_no}
+   </select>
+   <select id="get_order_count_female" parameterType="Integer"
+      resultType="Integer">
+      select order_count_female from store_table where
+      store_no=#{store_no}
+   </select>
+   <delete id="deleteReviwe">
+      delete from review_table where store_no=#{store_no}
+   </delete>
+   <delete id="deleteStore" parameterType="Integer">
+      delete from store_table
+      where store_no=#{store_no}
+   </delete>
+   <select id="getStoreByStar" resultType="model.Store">
+select * from store_table order by star_avg desc
+</select>
+<update id="updateStarAvg" parameterType="model.Store">
+update store_table set star_avg=#{star_avg},star_total=#{star_total} where store_no=#{store_no}
+</update>
+<select id="getStarTotal" resultType="Integer" parameterType="Integer">
+select star_total from store_table where store_no=#{store_no}
+</select>
+<select id="getReviewCount" resultType="Integer" parameterType="Integer">
+select review_count from store_table where store_no=#{store_no}
+</select>
+<update id="updateReviewCount" parameterType="model.Store">
+   update store_table set review_count=#{review_count} where store_no=#{store_no}
+</update>
+
+  
+   <select id="getStoreByReview" resultType="model.Store">
+   select * from store_table order by review_count desc
+   </select>
+   
+   <select id="getStoreByMale" resultType="model.Store">
+      select * from store_table
+      order by order_count_male desc
+   </select>
+   <select id="getStoreByFemale" resultType="model.Store">
+      select * from
+      store_table order by order_count_female desc
+   </select>
+
+   <select id="getStoreByUncle" resultType="model.Store">
+      select * from
+      store_table order by order_count_old desc
+   </select>
+   <select id="getStoreBy2030" resultType="model.Store">
+      select * from store_table
+      order by order_count_young desc
+   </select>
+      <update id="updateStar" parameterType = "Integer">
+      update store_table set admin_star=#{admin_star} where store_no=#{store_no}
+   </update>
+   <select id="getAdmin" resultType="model.Store">
+      select * from store_table where admin_star = 1
+   </select>
+</mapper>
