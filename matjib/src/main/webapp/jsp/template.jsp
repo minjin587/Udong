@@ -22,7 +22,6 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 <!-- Cycle2 -->
-
 </head>
 <body>
 	<!-- header -->
@@ -64,7 +63,6 @@
 		</div>
 	</header>
 	<!-- header -->
-
 	<!-- banner   -->
 	<!-- 배너 슬라이드 -->
 	<div style="position: realative;" class="banner">
@@ -78,7 +76,6 @@
 		</c:choose>
 	</div>
 	<!-- banner -->
-
 	<!-- main_content -->
 	<div class="main_content scontainer" style="position: realative;">
 				<!-- <div class="project_list"> -->
@@ -108,7 +105,6 @@
 				<!-- <input tpy=e"image" crc="send.png" alt="" class="btn" -->
 				<input type="submit" value="Send" class="btn" />
 			</form>
-
 			<p class="share">
 				<a href="#"> <i class="fab fa-facebook"></i>
 				</a> <a href="#"> <i class="fab fa-twitter"></i>
@@ -123,31 +119,17 @@
 				사업자 등록번호: 123-45-678910 [사업자정보확인]<br> 통신판매업 신고번호:
 				1111-서울송파-00000<br> 고객센터: 02-123-4567<br> &copy; 2020
 				UridoneMatjip Co., Ltd. All rights reserved.
-
 			</p>
 		</div>
 	</footer>
 	<!-- footer -->
-
-
 	<!-- <nav class="navbar">
         <div class="navbar_logo">
-
-
         </div>
-
-
         <div class="navbar_menu">
-
-
         </div>
-
-
         <div class="navbar_links">
-
-
         </div>
     </nav> -->
-
 </body>
 </html>
